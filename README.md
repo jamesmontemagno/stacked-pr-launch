@@ -115,9 +115,10 @@ node scripts/update-changelog.mjs
 The updater:
 
 1. Fetches `https://github.blog/changelog/feed/`.
-2. Parses the six newest entries.
-3. Normalizes titles, links, dates, and summaries.
-4. Writes `data/changelog.json` only when the serialized content changes.
+2. Keeps only entries whose GitHub Changelog type is `Release` or `Improvement`.
+3. Selects the six newest matching entries.
+4. Normalizes titles, links, dates, types, and summaries.
+5. Writes `data/changelog.json` only when the serialized content changes.
 
 If the browser cannot load the snapshot, the page retains the verified stacked pull request launch announcement as a meaningful fallback.
 

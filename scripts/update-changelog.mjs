@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 const feedUrl = "https://github.blog/changelog/feed/";
 const outputPath = resolve("data/changelog.json");
 const maxItems = 6;
+const allowedTypes = new Set(["Improvement", "Release"]);
 
 function decode(value) {
   return value
@@ -20,6 +21,11 @@ function tag(item, name) {
   return match ? decode(match[1]) : "";
 }
 
+function changelogType(item) {
+  const match = item.match(/<category\s+domain=["']changelog-type["'][^>]*>([\s\S]*?)<\/category>/i);
+  return match ? decode(match[1]) : "";
+}
+
 function formatDate(raw) {
   const date = new Date(raw);
   if (Number.isNaN(date.valueOf())) throw new Error(`Invalid changelog date: ${raw}`);
@@ -32,18 +38,20 @@ const response = await fetch(feedUrl, { headers: { "user-agent": "stacked-pr-lau
 if (!response.ok) throw new Error(`GitHub Changelog feed request failed: ${response.status}`);
 const feed = await response.text();
 const items = [...feed.matchAll(/<item>([\s\S]*?)<\/item>/gi)]
-  .slice(0, maxItems)
   .map((match) => {
     const item = match[1];
     const title = tag(item, "title");
     const url = tag(item, "link");
     const summary = tag(item, "description").replace(/The post .*? appeared first on .*?\.$/i, "").trim();
     const date = formatDate(tag(item, "pubDate"));
-    if (!title || !url || !summary) throw new Error("A changelog item was missing required content");
-    return { title, url, date, summary };
-  });
+    const type = changelogType(item);
+    if (!title || !url || !summary || !type) throw new Error("A changelog item was missing required content");
+    return { title, url, date, type, summary };
+  })
+  .filter(({ type }) => allowedTypes.has(type))
+  .slice(0, maxItems);
 
-if (!items.length) throw new Error("GitHub Changelog feed did not contain any items");
+if (!items.length) throw new Error("GitHub Changelog feed did not contain any release or improvement items");
 
 const payload = {
   updatedAt: formatDate(new Date().toUTCString()),

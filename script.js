@@ -44,7 +44,7 @@ async function loadLatestChangelog() {
     if (!item) throw new Error("No changelog items found");
 
     card.href = item.url;
-    $("#news-meta").textContent = `GITHUB CHANGELOG · ${item.date}`;
+    $("#news-meta").textContent = `GITHUB CHANGELOG · ${item.type.toUpperCase()} · ${item.date}`;
     $("#news-title").textContent = item.title;
     $("#news-summary").textContent = item.summary;
     $("#news-updated").textContent = `Refreshed ${data.updatedAt} from the official GitHub Changelog feed.`;

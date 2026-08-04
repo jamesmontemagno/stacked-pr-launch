@@ -29,7 +29,7 @@ jobs:
           node --check examples/task-workshop/server.js
           npm test --prefix examples/task-workshop
           node --input-type=module -e "import { readFile } from 'node:fs/promises'; for (const file of ['index.html','workshop.html']) { const html = await readFile(file, 'utf8'); if (!html.includes('<main') || !html.includes('</html>')) throw new Error(file + ' has incomplete document structure'); }"
-          node --input-type=module -e "import { readFile } from 'node:fs/promises'; const data = JSON.parse(await readFile('data/changelog.json', 'utf8')); if (!data.updatedAt || !Array.isArray(data.items) || !data.items.length || !data.items.every(({ title, url, date, summary }) => title && url && date && summary)) throw new Error('Invalid changelog data');"
+          node --input-type=module -e "import { readFile } from 'node:fs/promises'; const allowed = new Set(['Improvement','Release']); const data = JSON.parse(await readFile('data/changelog.json', 'utf8')); if (!data.updatedAt || !Array.isArray(data.items) || !data.items.length || !data.items.every(({ title, url, date, type, summary }) => title && url && date && allowed.has(type) && summary)) throw new Error('Invalid changelog data');"
   deploy:
     needs: validate
     environment:
