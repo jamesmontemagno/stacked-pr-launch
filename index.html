@@ -76,16 +76,23 @@ FORM: A release field guide, staged as an engineering workbench; selected direct
     <section id="simulator" class="simulator">
       <div class="sim-heading">
         <h2>Move through a stack<br>the way your team would.</h2>
-        <p>Choose a layer to see its focused diff. Mark layers ready, then merge at any point in the route. Nothing here is simulated server-side; it is a browser exercise designed to make the mental model click.</p>
+        <p>Build the stack from <code>main</code>, inspect each focused diff, then mark layers ready and watch the merge travel through its dependencies.</p>
+      </div>
+      <div class="sim-director">
+        <div>
+          <span id="process-step">READY TO BUILD</span>
+          <p id="process-copy">Start with the data model, then layer the API and interface above it.</p>
+        </div>
+        <button id="build-button" class="build-button">Build the stack <span aria-hidden="true">▶</span></button>
       </div>
       <div class="sim-shell">
         <aside class="stack-map" aria-label="Pull request stack">
           <div class="map-head"><span>STACK MAP</span><span id="ready-count">0 / 3 READY</span></div>
-          <div class="stack-list" role="tablist" aria-label="Choose a pull request layer">
+          <div id="stack-list" class="stack-list is-unbuilt" role="tablist" aria-label="Choose a pull request layer">
             <button class="stack-item active" role="tab" aria-selected="true" data-pr="ui"><strong>03</strong><span><b>Preference UI</b><small>#418 · targets API endpoint</small></span><em>+</em></button>
             <button class="stack-item" role="tab" aria-selected="false" data-pr="api"><strong>02</strong><span><b>API endpoint</b><small>#417 · targets data model</small></span><em>+</em></button>
             <button class="stack-item" role="tab" aria-selected="false" data-pr="data"><strong>01</strong><span><b>Data model</b><small>#416 · targets main</small></span><em>+</em></button>
-            <div class="main-line">main</div>
+            <div class="main-line"><span></span>main</div>
           </div>
         </aside>
         <section class="review-panel" aria-live="polite">

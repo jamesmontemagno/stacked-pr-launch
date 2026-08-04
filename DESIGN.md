@@ -19,6 +19,10 @@ Archivo Black carries the declarative, campaign-scale statements. Manrope keeps 
 
 On small screens, comparison columns and simulator regions become a readable vertical sequence. The stack map stays visible before the focused review. The workshop route becomes a static list above its lessons.
 
+## Motion
+
+The simulator uses one authored sequence to explain stack mechanics. Layers enter from `main` in dependency order, the route energizes as each pull request is created, and merging travels back through ready dependencies before landing on `main`. Routine selection and review feedback remain fast. Reduced-motion users receive the same ordered states and status narration without spatial travel or delays.
+
 ## Accessibility
 
 Text contrast is maintained against each field. Simulator controls are semantic buttons with selected-state labels, and the code examples remain selectable text. Motion is limited to short hover transitions and does not gate comprehension.
