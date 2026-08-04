@@ -165,6 +165,13 @@ $("#merge-button")?.addEventListener("click", async () => {
   renderLayer(state.current);
 });
 
+document.querySelectorAll(".terminal-code code[data-language]").forEach((code) => {
+  const source = code.innerText;
+  code.textContent = source;
+  code.classList.add(`language-${code.dataset.language}`);
+  window.Prism?.highlightElement(code);
+});
+
 document.querySelectorAll(".copy-button").forEach((button) => button.addEventListener("click", async () => {
   const originalLabel = button.textContent;
   const target = button.dataset.target ? document.querySelector(`#${button.dataset.target} code`) : null;
