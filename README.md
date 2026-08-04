@@ -8,7 +8,9 @@ Open `index.html` in a browser, or serve the directory with any static file serv
 
 ## Deployment
 
-The repository includes no build step. In GitHub, set **Settings → Pages → Build and deployment → Source** to **Deploy from a branch**, then select the default branch and `/ (root)`.
+The repository is configured to deploy from `main` at the repository root through GitHub Pages:
+
+https://jamesmontemagno.github.io/stacked-pr-launch/
 
 ## Source
 
