@@ -166,14 +166,67 @@ $("#merge-button")?.addEventListener("click", async () => {
 });
 
 document.querySelectorAll(".copy-button").forEach((button) => button.addEventListener("click", async () => {
+  const originalLabel = button.textContent;
+  const target = button.dataset.target ? document.querySelector(`#${button.dataset.target} code`) : null;
+  const copyText = button.dataset.copy || target?.innerText
+    .split("\n")
+    .map((line) => line.replace(/^\$\s?/, ""))
+    .join("\n");
+  if (!copyText) return;
   try {
-    await navigator.clipboard.writeText(button.dataset.copy.replace(/&#10;/g, "\n"));
+    await navigator.clipboard.writeText(copyText.replace(/&#10;/g, "\n"));
     button.textContent = "Copied";
-    setTimeout(() => { button.textContent = "Copy"; }, 1500);
+    setTimeout(() => { button.textContent = originalLabel; }, 1500);
   } catch {
     button.textContent = "Copy manually";
   }
 }));
+
+const workshopSteps = ["prepare", "model", "api", "ui", "submit", "review"];
+const completedWorkshopSteps = new Set(JSON.parse(localStorage.getItem("stacked-workshop-progress") || "[]"));
+
+function renderWorkshopProgress() {
+  const progressBar = $("#workshop-progress-bar");
+  if (!progressBar) return;
+  const completed = workshopSteps.filter((step) => completedWorkshopSteps.has(step)).length;
+  $("#workshop-progress-label").textContent = `${completed} of ${workshopSteps.length} complete`;
+  progressBar.style.transform = `scaleX(${completed / workshopSteps.length})`;
+  document.querySelectorAll(".checkpoint-button").forEach((button) => {
+    const isComplete = completedWorkshopSteps.has(button.dataset.checkpoint);
+    button.classList.toggle("complete", isComplete);
+    button.textContent = isComplete ? "Checkpoint complete" : button.dataset.originalLabel;
+  });
+  document.querySelectorAll(".lesson-link[data-step]").forEach((link) => {
+    link.classList.toggle("complete", completedWorkshopSteps.has(link.dataset.step));
+  });
+}
+
+document.querySelectorAll(".checkpoint-button").forEach((button) => {
+  button.dataset.originalLabel = button.textContent;
+  button.addEventListener("click", () => {
+    const step = button.dataset.checkpoint;
+    if (completedWorkshopSteps.has(step)) completedWorkshopSteps.delete(step);
+    else completedWorkshopSteps.add(step);
+    localStorage.setItem("stacked-workshop-progress", JSON.stringify([...completedWorkshopSteps]));
+    renderWorkshopProgress();
+  });
+});
+
+const workshopLessons = document.querySelectorAll(".lesson[id]");
+if (workshopLessons.length) {
+  const lessonObserver = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    document.querySelectorAll(".lesson-link").forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${visible.target.id}`);
+    });
+  }, { rootMargin: "-15% 0px -65%", threshold: [0, .25, .5] });
+  workshopLessons.forEach((lesson) => lessonObserver.observe(lesson));
+}
+
+renderWorkshopProgress();
 
 if ($("#diff")) {
   renderLayer("data");

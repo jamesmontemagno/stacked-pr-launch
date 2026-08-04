@@ -27,40 +27,99 @@ FORM: A guided field exercise that makes the tutorial feel like a sequence of re
   <main id="workshop">
     <section class="workshop-hero">
       <a class="back-link" href="index.html">← Back to the stack map</a>
-      <h1>Build one stack.<br>Feel the difference.</h1>
-      <p>This is a small, local exercise: take a feature with three logical layers, create the stack, and see why every reviewer gets a better job.</p>
-      <div class="workshop-meta"><span>~30 MINUTES</span><span>GITHUB CLI</span><span>A SCRATCH REPOSITORY</span></div>
+      <h1>Ship a real feature.<br>One layer at a time.</h1>
+      <p>Build a tiny task service from model to API to interface. Every layer runs, every commit has a reason to exist, and the finished pull requests form a stack you can inspect on GitHub.</p>
+      <div class="workshop-meta"><span>45–60 MINUTES</span><span>NODE.JS 22+</span><span>GITHUB CLI 2.90+</span><span>3 PULL REQUESTS</span></div>
+    </section>
+    <section class="lab-brief">
+      <div><span>The scenario</span><h2>A product team needs a task inbox.</h2></div>
+      <p>You’ll separate the work the way reviewers naturally reason about it: a tested task model, an HTTP API built on that model, and a browser interface built on the API. At every checkpoint, the branch is independently coherent.</p>
+      <div class="lab-stack" aria-label="Workshop stack"><b>task-ui</b><i>→</i><b>task-api</b><i>→</i><b>task-model</b><i>→</i><b>main</b></div>
     </section>
     <section class="workshop-layout">
       <aside class="lesson-nav" aria-label="Workshop steps">
+        <div class="workshop-progress"><span id="workshop-progress-label">0 of 6 complete</span><i><b id="workshop-progress-bar"></b></i></div>
         <p>Your route</p>
-        <a class="lesson-link active" href="#install"><b>01</b>Install the extension</a>
-        <a class="lesson-link" href="#base"><b>02</b>Create the foundation</a>
-        <a class="lesson-link" href="#layer"><b>03</b>Add the layers</a>
-        <a class="lesson-link" href="#review"><b>04</b>Review and merge</a>
+        <a class="lesson-link active" href="#prepare" data-step="prepare"><b>01</b>Prepare the repository</a>
+        <a class="lesson-link" href="#model" data-step="model"><b>02</b>Build the model</a>
+        <a class="lesson-link" href="#api" data-step="api"><b>03</b>Add the API</a>
+        <a class="lesson-link" href="#ui" data-step="ui"><b>04</b>Add the interface</a>
+        <a class="lesson-link" href="#submit" data-step="submit"><b>05</b>Submit the stack</a>
+        <a class="lesson-link" href="#review" data-step="review"><b>06</b>Review and merge</a>
+        <a class="lesson-link lesson-link-secondary" href="#recovery"><b>+</b>Recovery playbook</a>
       </aside>
       <div class="lessons">
-        <article id="install" class="lesson">
-          <span>01 / Get the tool</span><h2>Install the stack extension.</h2>
-          <p>Stacked pull requests are available on GitHub; the CLI extension is the quickest way to build your first one from the terminal.</p>
-          <div class="terminal"><button class="copy-button" data-copy="gh extension install github/gh-stack">Copy</button><code><i>$</i> gh extension install github/gh-stack</code></div>
-          <p class="tip">Use a scratch repository if you want a no-stakes first run. You will still use your ordinary GitHub authentication.</p>
+        <article id="prepare" class="lesson">
+          <span>01 / Prepare</span><h2>Start with a clean, runnable trunk.</h2>
+          <p>Create a scratch repository with a minimal Node project. The generated repository is public; replace <code>--public</code> with <code>--private</code> if you prefer.</p>
+          <div class="prerequisites"><div><b>Git</b><code>git --version</code><small>2.20 or later</small></div><div><b>GitHub CLI</b><code>gh --version</code><small>2.90 or later</small></div><div><b>Node.js</b><code>node --version</code><small>22 or later</small></div></div>
+          <div class="terminal" id="prepare-command"><button class="copy-button" data-target="prepare-command">Copy</button><code><i>$</i> gh auth status<br><i>$</i> gh extension install github/gh-stack<br><i>$</i> mkdir stacked-task-workshop &amp;&amp; cd stacked-task-workshop<br><i>$</i> git init -b main<br><i>$</i> npm init -y<br><i>$</i> npm pkg set scripts.test="node --test" scripts.start="node server.js"<br><i>$</i> node -e "require('fs').writeFileSync('README.md', '# Stacked task workshop\n')"<br><i>$</i> git add . &amp;&amp; git commit -m "Initialize task workshop"<br><i>$</i> gh repo create stacked-task-workshop --public --source=. --remote=origin --push</code></div>
+          <div class="expected"><b>Expected result</b><p>You are on <code>main</code>, the working tree is clean, and <code>origin</code> points at your new GitHub repository.</p><code>git status --short</code></div>
+          <p class="tip"><b>Name collision?</b> If that repository already exists, use a unique name in both <code>mkdir</code> and <code>gh repo create</code>.</p>
+          <button class="checkpoint-button" data-checkpoint="prepare">Mark preparation complete</button>
         </article>
-        <article id="base" class="lesson">
-          <span>02 / First layer</span><h2>Make the smallest complete foundation.</h2>
-          <p>Start from <code>main</code>, make a focused change, then create the first branch and pull request. This is the lowest layer of the stack.</p>
-          <div class="terminal"><button class="copy-button" data-copy="git switch -c data-model&#10;# make your focused change&#10;git push -u origin data-model">Copy</button><code><i>$</i> git switch -c data-model<br><span># make your focused change</span><br><i>$</i> git push -u origin data-model</code></div>
+        <article id="model" class="lesson">
+          <span>02 / Bottom layer</span><h2>Build a task model that stands on its own.</h2>
+          <p>Initialize the stack and name the first branch <code>task-model</code>. This layer owns task creation and completion—no HTTP, no HTML.</p>
+          <div class="terminal" id="model-init"><button class="copy-button" data-target="model-init">Copy</button><code><i>$</i> gh stack init<br><span># When prompted, enter: task-model</span><br><i>$</i> node -e "for (const dir of ['src','test']) require('fs').mkdirSync(dir, { recursive: true })"</code></div>
+          <h3>Create <code>src/tasks.js</code></h3>
+          <div class="terminal terminal-code" id="model-source"><button class="copy-button" data-target="model-source">Copy code</button><code>export function createTaskStore() {<br>  const tasks = [];<br><br>  return {<br>    all: () =&gt; [...tasks],<br>    add(title) {<br>      const cleanTitle = title?.trim();<br>      if (!cleanTitle) throw new Error("A task title is required");<br>      const task = { id: crypto.randomUUID(), title: cleanTitle, done: false };<br>      tasks.push(task);<br>      return task;<br>    },<br>    complete(id) {<br>      const task = tasks.find((item) =&gt; item.id === id);<br>      if (!task) throw new Error("Task not found");<br>      task.done = true;<br>      return task;<br>    }<br>  };<br>}</code></div>
+          <h3>Create <code>test/tasks.test.js</code></h3>
+          <div class="terminal terminal-code" id="model-test"><button class="copy-button" data-target="model-test">Copy code</button><code>import test from "node:test";<br>import assert from "node:assert/strict";<br>import { createTaskStore } from "../src/tasks.js";<br><br>test("adds and completes a task", () =&gt; {<br>  const store = createTaskStore();<br>  const task = store.add("Review the stack");<br>  assert.equal(store.all().length, 1);<br>  assert.equal(store.complete(task.id).done, true);<br>});<br><br>test("rejects an empty title", () =&gt; {<br>  const store = createTaskStore();<br>  assert.throws(() =&gt; store.add("  "), /title is required/);<br>});</code></div>
+          <div class="terminal" id="model-commit"><button class="copy-button" data-target="model-commit">Copy</button><code><i>$</i> npm pkg set type="module"<br><i>$</i> npm test<br><i>$</i> git add package.json src test<br><i>$</i> git commit -m "Add tested task model"</code></div>
+          <div class="expected"><b>Layer contract</b><p>Two tests pass. A reviewer sees only the domain behavior and its tests. This pull request will target <code>main</code>.</p></div>
+          <button class="checkpoint-button" data-checkpoint="model">Mark model complete</button>
         </article>
-        <article id="layer" class="lesson">
-          <span>03 / Build upward</span><h2>Put the next concern on top.</h2>
-          <p>After opening the first pull request, create the next branch from it. Its pull request targets the layer below instead of <code>main</code>. Repeat for your UI, integration, or final behavior.</p>
-          <div class="stack-recipe"><div><b>data-model</b><span>targets main</span></div><div><b>api-endpoint</b><span>targets data-model</span></div><div><b>preference-ui</b><span>targets api-endpoint</span></div></div>
-          <p class="tip">The exact changes are yours. The important part is that each layer is independently understandable and its pull request targets the previous layer.</p>
+        <article id="api" class="lesson">
+          <span>03 / Middle layer</span><h2>Expose the model through HTTP.</h2>
+          <p>Create a branch on top of <code>task-model</code>. The API consumes the model below it and adds two routes: list tasks and create a task.</p>
+          <div class="terminal" id="api-init"><button class="copy-button" data-target="api-init">Copy</button><code><i>$</i> gh stack add task-api</code></div>
+          <h3>Create <code>server.js</code></h3>
+          <div class="terminal terminal-code terminal-tall" id="api-source"><button class="copy-button" data-target="api-source">Copy code</button><code>import { createServer } from "node:http";<br>import { createTaskStore } from "./src/tasks.js";<br><br>const store = createTaskStore();<br>store.add("Review the model pull request");<br><br>export const server = createServer(async (request, response) =&gt; {<br>  response.setHeader("content-type", "application/json");<br><br>  if (request.method === "GET" &amp;&amp; request.url === "/api/tasks") {<br>    return response.end(JSON.stringify(store.all()));<br>  }<br><br>  if (request.method === "POST" &amp;&amp; request.url === "/api/tasks") {<br>    let body = "";<br>    for await (const chunk of request) body += chunk;<br>    try {<br>      const task = store.add(JSON.parse(body).title);<br>      response.writeHead(201);<br>      return response.end(JSON.stringify(task));<br>    } catch (error) {<br>      response.writeHead(400);<br>      return response.end(JSON.stringify({ error: error.message }));<br>    }<br>  }<br><br>  response.writeHead(404);<br>  response.end(JSON.stringify({ error: "Not found" }));<br>});<br><br>if (process.env.NODE_ENV !== "test") {<br>  server.listen(3000, () =&gt; console.log("Task API: http://localhost:3000"));<br>}</code></div>
+          <div class="terminal" id="api-run"><button class="copy-button" data-target="api-run">Copy</button><code><i>$</i> npm test<br><i>$</i> node server.js<br><span># In another terminal:</span><br><i>$</i> curl http://localhost:3000/api/tasks<br><i>$</i> curl -X POST http://localhost:3000/api/tasks -H "content-type: application/json" -d '{"title":"Ship a small PR"}'</code></div>
+          <div class="terminal" id="api-commit"><button class="copy-button" data-target="api-commit">Copy</button><code><i>$</i> git add server.js<br><i>$</i> git commit -m "Expose tasks over HTTP"</code></div>
+          <div class="expected"><b>Layer contract</b><p>The original model tests still pass, GET returns a task array, and POST returns <code>201</code>. This pull request will target <code>task-model</code>.</p></div>
+          <button class="checkpoint-button" data-checkpoint="api">Mark API complete</button>
+        </article>
+        <article id="ui" class="lesson">
+          <span>04 / Top layer</span><h2>Put a browser interface on the API.</h2>
+          <p>The final layer changes the server only enough to serve a static interface. A reviewer can focus on the user flow without re-reviewing model internals.</p>
+          <div class="terminal" id="ui-init"><button class="copy-button" data-target="ui-init">Copy</button><code><i>$</i> gh stack add task-ui<br><i>$</i> node -e "require('fs').mkdirSync('public', { recursive: true })"</code></div>
+          <h3>Add this block near the top of <code>server.js</code></h3>
+          <div class="terminal terminal-code" id="ui-server"><button class="copy-button" data-target="ui-server">Copy code</button><code>import { readFile } from "node:fs/promises";<br><br><span>// Add inside createServer, before the API routes:</span><br>if (request.method === "GET" &amp;&amp; request.url === "/") {<br>  response.setHeader("content-type", "text/html");<br>  return response.end(await readFile("public/index.html", "utf8"));<br>}</code></div>
+          <h3>Create <code>public/index.html</code></h3>
+          <div class="terminal terminal-code terminal-tall" id="ui-source"><button class="copy-button" data-target="ui-source">Copy code</button><code>&lt;!doctype html&gt;<br>&lt;html lang="en"&gt;<br>&lt;meta charset="utf-8"&gt;<br>&lt;meta name="viewport" content="width=device-width"&gt;<br>&lt;title&gt;Task inbox&lt;/title&gt;<br>&lt;style&gt;<br>  body { max-width: 42rem; margin: 4rem auto; padding: 0 1rem; font: 16px system-ui; }<br>  form { display: flex; gap: .5rem; } input { flex: 1; padding: .7rem; }<br>  button { padding: .7rem 1rem; } li { margin: .8rem 0; }<br>&lt;/style&gt;<br>&lt;h1&gt;Task inbox&lt;/h1&gt;<br>&lt;form&gt;&lt;input name="title" required placeholder="What needs doing?"&gt;&lt;button&gt;Add task&lt;/button&gt;&lt;/form&gt;<br>&lt;ul&gt;&lt;/ul&gt;<br>&lt;script&gt;<br>  const list = document.querySelector("ul");<br>  async function load() {<br>    const tasks = await fetch("/api/tasks").then(r =&gt; r.json());<br>    list.replaceChildren(...tasks.map(task =&gt; {<br>      const item = document.createElement("li");<br>      item.textContent = task.title;<br>      return item;<br>    }));<br>  }<br>  document.querySelector("form").addEventListener("submit", async event =&gt; {<br>    event.preventDefault();<br>    const title = new FormData(event.currentTarget).get("title");<br>    await fetch("/api/tasks", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ title }) });<br>    event.currentTarget.reset();<br>    load();<br>  });<br>  load();<br>&lt;/script&gt;<br>&lt;/html&gt;</code></div>
+          <div class="terminal" id="ui-run"><button class="copy-button" data-target="ui-run">Copy</button><code><i>$</i> npm test<br><i>$</i> npm start<br><span># Open http://localhost:3000 and add a task.</span><br><i>$</i> git add server.js public<br><i>$</i> git commit -m "Add task inbox interface"</code></div>
+          <div class="expected"><b>Layer contract</b><p>The interface loads existing tasks and creates new ones. This pull request will target <code>task-api</code>.</p></div>
+          <button class="checkpoint-button" data-checkpoint="ui">Mark interface complete</button>
+        </article>
+        <article id="submit" class="lesson">
+          <span>05 / Publish</span><h2>Turn three branches into one GitHub stack.</h2>
+          <p>Inspect the local shape first, then let the extension push every branch and create pull requests with the correct bases.</p>
+          <div class="stack-recipe"><div><b>task-ui</b><span>targets task-api</span></div><div><b>task-api</b><span>targets task-model</span></div><div><b>task-model</b><span>targets main</span></div></div>
+          <div class="terminal" id="submit-command"><button class="copy-button" data-target="submit-command">Copy</button><code><i>$</i> gh stack view<br><i>$</i> gh stack submit<br><span># Review titles and descriptions in the interactive editor, then submit.</span><br><i>$</i> gh stack view</code></div>
+          <div class="expected"><b>Expected result</b><p>GitHub shows three linked pull requests. Opening any one displays the stack map, and its Files changed tab contains only that layer’s diff.</p></div>
+          <p class="tip"><b>Team handoff:</b> A teammate can run <code>gh stack checkout</code> and choose the remote stack, or use a pull request number such as <code>gh stack checkout 42</code>.</p>
+          <button class="checkpoint-button" data-checkpoint="submit">Mark stack submitted</button>
         </article>
         <article id="review" class="lesson">
-          <span>04 / Let the stack work</span><h2>Review in layers. Merge with intent.</h2>
-          <p>Reviewers can inspect a single layer’s diff and work in parallel. When a ready layer is merged, every layer above it remains open and is automatically rebased and retargeted. Merge the latest ready pull request to land it and all unmerged layers below it in one operation.</p>
-          <a class="button button-primary" href="https://gh.io/stacks" target="_blank" rel="noopener">Read the official docs <span aria-hidden="true">↗</span></a>
+          <span>06 / Land it</span><h2>Review what each person is qualified to judge.</h2>
+          <div class="review-roles"><div><b>Domain reviewer</b><p>Opens <code>task-model</code>. Checks validation, state behavior, and tests.</p></div><div><b>API reviewer</b><p>Opens <code>task-api</code>. Checks status codes, request parsing, and errors.</p></div><div><b>Product reviewer</b><p>Opens <code>task-ui</code>. Checks the end-to-end task creation flow.</p></div></div>
+          <p>Approve each focused pull request. To land everything together, merge the top ready pull request from its stack controls. To land only the foundation, merge <code>task-model</code>; GitHub keeps the upper pull requests open and retargets them.</p>
+          <div class="terminal" id="sync-command"><button class="copy-button" data-target="sync-command">Copy</button><code><span># After main or a lower layer changes:</span><br><i>$</i> gh stack sync<br><span># Fetches, rebases, pushes, and refreshes PR state.</span><br><br><span># After the stack is merged:</span><br><i>$</i> gh stack sync --prune</code></div>
+          <div class="reflection"><b>Compare the review jobs</b><p>Imagine the model, HTTP handling, and interface as one pull request. Which reviewer would confidently approve all three concerns? The stack did not reduce the work—it gave each decision a clear boundary.</p></div>
+          <button class="checkpoint-button" data-checkpoint="review">Complete the workshop</button>
+        </article>
+        <article id="recovery" class="lesson lesson-recovery">
+          <span>Recovery playbook</span><h2>Stacks are normal Git—with guardrails.</h2>
+          <div class="recovery-grid">
+            <div><b>Trunk moved</b><p>Rebase every layer from the bottom upward.</p><code>gh stack rebase</code></div>
+            <div><b>Conflict paused rebase</b><p>Fix files, stage them, and continue—or restore the pre-rebase state.</p><code>git add .<br>gh stack rebase --continue<br>gh stack rebase --abort</code></div>
+            <div><b>Branch needs reordering</b><p>Open the interactive stack editor to reorder, rename, fold, or drop layers.</p><code>gh stack modify</code></div>
+            <div><b>Push was rejected</b><p>Synchronize against the latest remote stack and retry.</p><code>gh stack sync<br>gh stack submit</code></div>
+          </div>
+          <div class="reference-links"><a href="https://github.com/jamesmontemagno/stacked-pr-launch/tree/main/examples/task-workshop" target="_blank" rel="noopener"><b>Reference implementation</b><span>Compare your finished files or clone the runnable result. ↗</span></a><a href="https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests" target="_blank" rel="noopener"><b>Official stacked PR guide</b><span>Continue into command reference and team rollout. ↗</span></a></div>
+          <div class="next-lab"><div><b>Try the pattern on your work</b><p>Choose a feature with a schema or model change, an API or integration, and a user-facing behavior. If each part has a different review question, it is a strong stack candidate.</p></div><a class="button button-primary" href="index.html#simulator">Replay the stack <span aria-hidden="true">→</span></a></div>
         </article>
       </div>
     </section>

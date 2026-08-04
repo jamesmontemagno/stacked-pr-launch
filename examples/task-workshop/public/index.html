@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Task inbox</title>
+<style>
+  body { max-width: 42rem; margin: 4rem auto; padding: 0 1rem; font: 16px system-ui; }
+  form { display: flex; gap: .5rem; }
+  input { flex: 1; padding: .7rem; }
+  button { padding: .7rem 1rem; }
+  li { margin: .8rem 0; }
+</style>
+<h1>Task inbox</h1>
+<form>
+  <input name="title" required placeholder="What needs doing?">
+  <button>Add task</button>
+</form>
+<ul></ul>
+<script>
+  const list = document.querySelector("ul");
+
+  async function load() {
+    const tasks = await fetch("/api/tasks").then((response) => response.json());
+    list.replaceChildren(...tasks.map((task) => {
+      const item = document.createElement("li");
+      item.textContent = task.title;
+      return item;
+    }));
+  }
+
+  document.querySelector("form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const title = new FormData(event.currentTarget).get("title");
+    await fetch("/api/tasks", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ title })
+    });
+    event.currentTarget.reset();
+    load();
+  });
+
+  load();
+</script>
+</html>

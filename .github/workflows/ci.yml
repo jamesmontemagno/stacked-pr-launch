@@ -17,7 +17,12 @@ jobs:
         with:
           node-version: 22
       - name: Validate browser scripts
-        run: node --check script.js && node --check scripts/update-changelog.mjs
+        run: |
+          node --check script.js
+          node --check scripts/update-changelog.mjs
+          node --check examples/task-workshop/server.js
+      - name: Run workshop reference tests
+        run: npm test --prefix examples/task-workshop
       - name: Validate HTML structure
         run: |
           node --input-type=module -e "import { readFile } from 'node:fs/promises'; for (const file of ['index.html','workshop.html']) { const html = await readFile(file, 'utf8'); if (!html.includes('<main') || !html.includes('</html>')) throw new Error(file + ' has incomplete document structure'); }"
