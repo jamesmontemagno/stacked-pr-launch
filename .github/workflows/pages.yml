@@ -1,0 +1,44 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate site assets
+        run: |
+          node --check script.js
+          node --check scripts/update-changelog.mjs
+          node --input-type=module -e "import { readFile } from 'node:fs/promises'; for (const file of ['index.html','workshop.html']) { const html = await readFile(file, 'utf8'); if (!html.includes('<main') || !html.includes('</html>')) throw new Error(file + ' has incomplete document structure'); }"
+          node --input-type=module -e "import { readFile } from 'node:fs/promises'; const data = JSON.parse(await readFile('data/changelog.json', 'utf8')); if (!data.updatedAt || !Array.isArray(data.items) || !data.items.length || !data.items.every(({ title, url, date, summary }) => title && url && date && summary)) throw new Error('Invalid changelog data');"
+  deploy:
+    needs: validate
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

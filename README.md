@@ -8,7 +8,7 @@ Open `index.html` in a browser, or serve the directory with any static file serv
 
 ## Deployment
 
-The repository is configured to deploy from `main` at the repository root through GitHub Pages:
+The repository deploys to GitHub Pages through a GitHub Actions workflow after static-site validation succeeds:
 
 https://jamesmontemagno.github.io/stacked-pr-launch/
 

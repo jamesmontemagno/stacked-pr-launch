@@ -22,6 +22,27 @@ const layers = {
 const state = { current: "ui", ready: new Set(), merged: new Set() };
 const $ = (selector) => document.querySelector(selector);
 
+async function loadLatestChangelog() {
+  const card = $("#news-card");
+  if (!card) return;
+
+  try {
+    const response = await fetch("data/changelog.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Changelog data unavailable");
+    const data = await response.json();
+    const item = data.items?.[0];
+    if (!item) throw new Error("No changelog items found");
+
+    card.href = item.url;
+    $("#news-meta").textContent = `GITHUB CHANGELOG · ${item.date}`;
+    $("#news-title").textContent = item.title;
+    $("#news-summary").textContent = item.summary;
+    $("#news-updated").textContent = `Refreshed ${data.updatedAt} from the official GitHub Changelog feed.`;
+  } catch {
+    $("#news-updated").textContent = "Showing the launch announcement from the GitHub Changelog.";
+  }
+}
+
 function renderLayer(key) {
   state.current = key;
   const layer = layers[key];
@@ -74,3 +95,5 @@ document.querySelectorAll(".copy-button").forEach((button) => button.addEventLis
 if ($("#diff")) {
   renderLayer("ui");
 }
+
+loadLatestChangelog();
