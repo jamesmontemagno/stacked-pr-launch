@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<!--
+THESIS: A large change becomes legible when its parts are arranged as a route, not a wall.
+OWN-WORLD: Night-shift drafting table: ink-blue field, electric chartreuse routes, paper-white review artifacts, squared structural lines.
+STORY: Developers see the review bottleneck, manipulate a real stack, then choose the workshop.
+FIRST VIEWPORT: Oversized statement left; an active, layered pull-request route dominates the right; workshop action sits beneath the statement.
+FORM: A release field guide, staged as an engineering workbench; selected directly from the product's workflow.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how stacked pull requests turn large changes into small, reviewable layers.">
+  <title>Stacked, not stalled</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#simulator">Skip to simulator</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Stacked, not stalled home"><span></span>STACKED / NOT STALLED</a>
+    <nav aria-label="Primary navigation">
+      <a href="#why">Why stacks</a>
+      <a href="#news">In the preview</a>
+      <a href="workshop.html">Workshop</a>
+    </nav>
+    <a class="header-cta" href="workshop.html">Build a stack <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="launch-note">Public preview · July 2026</p>
+        <h1>Big change.<br><em>Small</em> reviews.</h1>
+        <p class="lede">The work was never too big. The pull request was. Break it into a sequence your team can actually inspect, discuss, and land.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#simulator">Try the stack simulator <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="workshop.html">Take the hands-on workshop <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero-route" aria-label="A visual route from a large feature to three focused pull requests">
+        <div class="route-title">Shipping: notification preferences</div>
+        <div class="route-node route-node-top"><b>PR #418</b><span>Preference UI</span><i>reviewing</i></div>
+        <div class="route-node route-node-mid"><b>PR #417</b><span>API endpoint</span><i>approved</i></div>
+        <div class="route-node route-node-bottom"><b>PR #416</b><span>Data model</span><i>merged</i></div>
+        <div class="route-main">main</div>
+        <svg viewBox="0 0 520 470" aria-hidden="true"><path d="M74 410H178V312H307V215H178V118H307" /><path d="M307 215H446" /></svg>
+      </div>
+    </section>
+
+    <section id="why" class="problem">
+      <div class="problem-statement">
+        <p>When a single pull request tries to carry every concern, the review stops being a conversation and becomes a backlog item.</p>
+      </div>
+      <div class="comparison" aria-label="Comparison of a large pull request and a stacked pull request">
+        <article class="bad-pr">
+          <span class="comparison-label">One giant pull request</span>
+          <h2>Everything is coupled to the same “please review this.”</h2>
+          <div class="diff-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p>Too much context. One blocked check holds up the whole idea. Reviewers wait for each other.</p>
+        </article>
+        <article class="good-pr">
+          <span class="comparison-label">A stack of focused pull requests</span>
+          <h2>Each layer says exactly what needs attention.</h2>
+          <ul>
+            <li><b>1</b><span>Data model</span><small>reviewable foundation</small></li>
+            <li><b>2</b><span>API endpoint</span><small>parallel review</small></li>
+            <li><b>3</b><span>Preference UI</span><small>clear behavior</small></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="simulator" class="simulator">
+      <div class="sim-heading">
+        <h2>Move through a stack<br>the way your team would.</h2>
+        <p>Choose a layer to see its focused diff. Mark layers ready, then merge at any point in the route. Nothing here is simulated server-side; it is a browser exercise designed to make the mental model click.</p>
+      </div>
+      <div class="sim-shell">
+        <aside class="stack-map" aria-label="Pull request stack">
+          <div class="map-head"><span>STACK MAP</span><span id="ready-count">0 / 3 READY</span></div>
+          <div class="stack-list" role="tablist" aria-label="Choose a pull request layer">
+            <button class="stack-item active" role="tab" aria-selected="true" data-pr="ui"><strong>03</strong><span><b>Preference UI</b><small>#418 · targets API endpoint</small></span><em>+</em></button>
+            <button class="stack-item" role="tab" aria-selected="false" data-pr="api"><strong>02</strong><span><b>API endpoint</b><small>#417 · targets data model</small></span><em>+</em></button>
+            <button class="stack-item" role="tab" aria-selected="false" data-pr="data"><strong>01</strong><span><b>Data model</b><small>#416 · targets main</small></span><em>+</em></button>
+            <div class="main-line">main</div>
+          </div>
+        </aside>
+        <section class="review-panel" aria-live="polite">
+          <div class="review-top"><span id="pr-number">Pull request #418</span><button id="ready-button" class="ready-button">Mark ready for review</button></div>
+          <h3 id="pr-title">Add notification preference controls</h3>
+          <p id="pr-description">A small UI layer that lets people choose how they hear from your product.</p>
+          <div id="diff" class="code-diff" aria-label="Focused code diff"></div>
+          <div class="review-actions"><span id="layer-status">Awaiting review</span><button id="merge-button" class="merge-button" disabled>Merge ready layers <span aria-hidden="true">→</span></button></div>
+        </section>
+      </div>
+      <p id="merge-message" class="merge-message" aria-live="polite"></p>
+    </section>
+
+    <section class="principles">
+      <div><span>Keep moving</span><p>Review short, narrow pull requests in parallel instead of queuing behind a single giant diff.</p></div>
+      <div><span>Keep safeguards</span><p>Existing checks, required reviews, and branch protections continue to govern every layer.</p></div>
+      <div><span>Land deliberately</span><p>Merge one, some, or all: choose a ready layer and land it with every ready dependency below it.</p></div>
+    </section>
+
+    <section id="news" class="news">
+      <div class="news-intro"><h2>What’s in the public preview</h2><p>Stacked pull requests are rolling out to repositories now, with merge queue support following progressively.</p></div>
+      <a class="news-card" href="https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/" target="_blank" rel="noopener">
+        <div><span>GITHUB CHANGELOG · JUL 30, 2026</span><h3>Stacked pull requests are now in public preview</h3><p>Built into GitHub, available across github.com, the GitHub CLI, GitHub Mobile, and coding agents.</p></div>
+        <b aria-hidden="true">↗</b>
+      </a>
+      <div class="news-links">
+        <a href="https://gh.io/stacks" target="_blank" rel="noopener">Read the documentation <span>→</span></a>
+        <a href="https://gh.io/stacks-feedback" target="_blank" rel="noopener">Share preview feedback <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="workshop-banner">
+      <div><p>Make it real in your own repository.</p><h2>A thirty-minute workshop for your next non-trivial change.</h2></div>
+      <a class="button button-light" href="workshop.html">Start the workshop <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <footer><span>STACKED / NOT STALLED</span><span>Built to explain the GitHub public preview</span><a href="https://github.com/github/gh-stack" target="_blank" rel="noopener">github/gh-stack ↗</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>

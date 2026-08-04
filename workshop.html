@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<!--
+THESIS: Learning a stack works best as a route with visible progress, not a static installation guide.
+OWN-WORLD: The same ink-blue, chartreuse, and paper-white workbench system as the launch page, with an editorial terminal as the physical task surface.
+STORY: A developer follows four small tasks and leaves with the vocabulary and commands to create a first stack.
+FIRST VIEWPORT: Workshop promise and progress route frame a first actionable terminal command.
+FORM: A guided field exercise that makes the tutorial feel like a sequence of reviewable layers.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A guided workshop for trying GitHub stacked pull requests.">
+  <title>Workshop · Stacked, not stalled</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="workshop-page">
+  <a class="skip-link" href="#workshop">Skip to workshop</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html"><span></span>STACKED / NOT STALLED</a>
+    <nav aria-label="Primary navigation"><a href="index.html#why">Why stacks</a><a href="index.html#simulator">Simulator</a><a href="workshop.html" aria-current="page">Workshop</a></nav>
+    <a class="header-cta" href="index.html#simulator">See the simulator <span aria-hidden="true">→</span></a>
+  </header>
+  <main id="workshop">
+    <section class="workshop-hero">
+      <a class="back-link" href="index.html">← Back to the stack map</a>
+      <h1>Build one stack.<br>Feel the difference.</h1>
+      <p>This is a small, local exercise: take a feature with three logical layers, create the stack, and see why every reviewer gets a better job.</p>
+      <div class="workshop-meta"><span>~30 MINUTES</span><span>GITHUB CLI</span><span>A SCRATCH REPOSITORY</span></div>
+    </section>
+    <section class="workshop-layout">
+      <aside class="lesson-nav" aria-label="Workshop steps">
+        <p>Your route</p>
+        <a class="lesson-link active" href="#install"><b>01</b>Install the extension</a>
+        <a class="lesson-link" href="#base"><b>02</b>Create the foundation</a>
+        <a class="lesson-link" href="#layer"><b>03</b>Add the layers</a>
+        <a class="lesson-link" href="#review"><b>04</b>Review and merge</a>
+      </aside>
+      <div class="lessons">
+        <article id="install" class="lesson">
+          <span>01 / Get the tool</span><h2>Install the stack extension.</h2>
+          <p>Stacked pull requests are available on GitHub; the CLI extension is the quickest way to build your first one from the terminal.</p>
+          <div class="terminal"><button class="copy-button" data-copy="gh extension install github/gh-stack">Copy</button><code><i>$</i> gh extension install github/gh-stack</code></div>
+          <p class="tip">Use a scratch repository if you want a no-stakes first run. You will still use your ordinary GitHub authentication.</p>
+        </article>
+        <article id="base" class="lesson">
+          <span>02 / First layer</span><h2>Make the smallest complete foundation.</h2>
+          <p>Start from <code>main</code>, make a focused change, then create the first branch and pull request. This is the lowest layer of the stack.</p>
+          <div class="terminal"><button class="copy-button" data-copy="git switch -c data-model&#10;# make your focused change&#10;git push -u origin data-model">Copy</button><code><i>$</i> git switch -c data-model<br><span># make your focused change</span><br><i>$</i> git push -u origin data-model</code></div>
+        </article>
+        <article id="layer" class="lesson">
+          <span>03 / Build upward</span><h2>Put the next concern on top.</h2>
+          <p>After opening the first pull request, create the next branch from it. Its pull request targets the layer below instead of <code>main</code>. Repeat for your UI, integration, or final behavior.</p>
+          <div class="stack-recipe"><div><b>data-model</b><span>targets main</span></div><div><b>api-endpoint</b><span>targets data-model</span></div><div><b>preference-ui</b><span>targets api-endpoint</span></div></div>
+          <p class="tip">The exact changes are yours. The important part is that each layer is independently understandable and its pull request targets the previous layer.</p>
+        </article>
+        <article id="review" class="lesson">
+          <span>04 / Let the stack work</span><h2>Review in layers. Merge with intent.</h2>
+          <p>Reviewers can inspect a single layer’s diff and work in parallel. When a ready layer is merged, every layer above it remains open and is automatically rebased and retargeted. Merge the latest ready pull request to land it and all unmerged layers below it in one operation.</p>
+          <a class="button button-primary" href="https://gh.io/stacks" target="_blank" rel="noopener">Read the official docs <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer><span>STACKED / NOT STALLED</span><span>Practice the workflow, then use it on real work.</span><a href="index.html">Return home →</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
