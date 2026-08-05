@@ -1,6 +1,13 @@
 {
-  "updatedAt": "AUG 4, 2026",
+  "updatedAt": "AUG 5, 2026",
   "items": [
+    {
+      "title": "Customize code scanning default setup at scale",
+      "url": "https://github.blog/changelog/2026-08-04-customize-code-scanning-default-setup-at-scale",
+      "date": "AUG 4, 2026",
+      "type": "Release",
+      "summary": "You can now apply your own configuration file to code scanning default setup, using the new github-codeql-config-file repository property. This gives you control over how CodeQL scans your code for…"
+    },
     {
       "title": "Customize Dependabot pull request branch names",
       "url": "https://github.blog/changelog/2026-08-04-customize-dependabot-pull-request-branch-names",
@@ -35,13 +42,6 @@
       "date": "AUG 3, 2026",
       "type": "Release",
       "summary": "Enterprise administrators can now customize managed settings by targeting enterprise teams with itemized configuration files. Large enterprises can scale governance without bottlenecking every configuration change through central administrators or one-size-fits-all…"
-    },
-    {
-      "title": "Trigger Copilot automations with comments",
-      "url": "https://github.blog/changelog/2026-08-03-trigger-copilot-automations-with-comments",
-      "date": "AUG 3, 2026",
-      "type": "Release",
-      "summary": "You can now create Copilot cloud agent automations that run when an issue comment or pull request comment is created. Common use cases include: Generate documentation: Comment on a pull…"
     }
   ]
 }
