@@ -1,6 +1,13 @@
 {
-  "updatedAt": "AUG 6, 2026",
+  "updatedAt": "AUG 7, 2026",
   "items": [
+    {
+      "title": "Kimi K3 is now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot",
+      "date": "AUG 6, 2026",
+      "type": "Release",
+      "summary": "Editor’s note (August 6, 2026): We have resumed rolling out Kimi K3 in GitHub Copilot. This model is billed at provider list pricing under usage-based billing. See GitHub Copilot’s pricing…"
+    },
     {
       "title": "Customize code scanning default setup at scale",
       "url": "https://github.blog/changelog/2026-08-04-customize-code-scanning-default-setup-at-scale",
@@ -35,13 +42,6 @@
       "date": "AUG 3, 2026",
       "type": "Release",
       "summary": "When you delegate a task to GitHub Copilot cloud agent, you can now set the reasoning level for models that support it. This allows you to control how much the…"
-    },
-    {
-      "title": "Enterprise team specialization for managed settings",
-      "url": "https://github.blog/changelog/2026-08-03-enterprise-team-specialization-for-managed-settings",
-      "date": "AUG 3, 2026",
-      "type": "Release",
-      "summary": "Enterprise administrators can now customize managed settings by targeting enterprise teams with itemized configuration files. Large enterprises can scale governance without bottlenecking every configuration change through central administrators or one-size-fits-all…"
     }
   ]
 }
