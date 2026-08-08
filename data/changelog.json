@@ -1,47 +1,47 @@
 {
-  "updatedAt": "AUG 7, 2026",
+  "updatedAt": "AUG 8, 2026",
   "items": [
     {
-      "title": "Kimi K3 is now available in GitHub Copilot",
-      "url": "https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot",
-      "date": "AUG 6, 2026",
+      "title": "GitHub Copilot weekly releases — August 3",
+      "url": "https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3",
+      "date": "AUG 7, 2026",
       "type": "Release",
-      "summary": "Editor’s note (August 6, 2026): We have resumed rolling out Kimi K3 in GitHub Copilot. This model is billed at provider list pricing under usage-based billing. See GitHub Copilot’s pricing…"
+      "summary": "This week’s updates across GitHub Copilot in the desktop app, CLI, and VS Code help you resume and organize work, review changes, and ask questions without losing context. GitHub Copilot…"
     },
     {
-      "title": "Customize code scanning default setup at scale",
-      "url": "https://github.blog/changelog/2026-08-04-customize-code-scanning-default-setup-at-scale",
-      "date": "AUG 4, 2026",
+      "title": "Enterprises can now install third-party GitHub Apps",
+      "url": "https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps",
+      "date": "AUG 7, 2026",
+      "type": "Improvement",
+      "summary": "Enterprise owners can now install public GitHub Apps created outside their enterprise on their enterprise account. This allows third-party integrators to build apps for enterprise management scenarios. Enterprise installations grant…"
+    },
+    {
+      "title": "Copilot impact dashboard adds a return on investment section",
+      "url": "https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section",
+      "date": "AUG 7, 2026",
+      "type": "Improvement",
+      "summary": "The Copilot impact dashboard now includes a “Potential return on investment” section that connects what you spend on Copilot to the pull request output you get back. What’s new Two…"
+    },
+    {
+      "title": "Copilot code review effort levels are generally available",
+      "url": "https://github.blog/changelog/2026-08-07-copilot-code-review-effort-levels-are-generally-available",
+      "date": "AUG 7, 2026",
       "type": "Release",
-      "summary": "You can now apply your own configuration file to code scanning default setup, using the new github-codeql-config-file repository property. This gives you control over how CodeQL scans your code for…"
+      "summary": "Lite and Balanced effort levels for GitHub Copilot code review are now generally available. They let you match the depth of a review to the complexity and risk of a…"
     },
     {
-      "title": "Customize Dependabot pull request branch names",
-      "url": "https://github.blog/changelog/2026-08-04-customize-dependabot-pull-request-branch-names",
-      "date": "AUG 4, 2026",
+      "title": "Copilot usage metrics API adds agent app activity",
+      "url": "https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity",
+      "date": "AUG 7, 2026",
       "type": "Improvement",
-      "summary": "You can now customize the branch names Dependabot creates for pull requests. New pull-request-branch-name options in .github/dependabot.yml let you set a prefix and maximum length, choose segment and word separators,…"
+      "summary": "Since agent apps arrived on GitHub, teams have been able to run agents from partners like Claude and Codex directly in their GitHub workflows. The Copilot usage metrics API now…"
     },
     {
-      "title": "Code coverage automatic enablement in Code Quality settings",
-      "url": "https://github.blog/changelog/2026-08-04-code-coverage-automatic-enablement-in-code-quality-settings",
-      "date": "AUG 4, 2026",
-      "type": "Improvement",
-      "summary": "We’re making code coverage setup faster and simpler. You’ll now see a new option in your repository’s Code Quality settings that lets GitHub generate your coverage workflow automatically with AI.…"
-    },
-    {
-      "title": "CodeQL 2.26.2 adds Swift 6.3.3 and Kotlin 2.4.10 support",
-      "url": "https://github.blog/changelog/2026-08-04-codeql-2-26-2-adds-swift-6-3-3-and-kotlin-2-4-10-support",
-      "date": "AUG 4, 2026",
-      "type": "Improvement",
-      "summary": "CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We’ve recently released CodeQL 2.26.2, which adds support for Swift 6.3.3…"
-    },
-    {
-      "title": "Customize the reasoning level for Copilot cloud agent",
-      "url": "https://github.blog/changelog/2026-08-03-customize-the-reasoning-level-for-copilot-cloud-agent",
-      "date": "AUG 3, 2026",
+      "title": "“Relates to” issue relationship in public preview and multi-select fields is generally available",
+      "url": "https://github.blog/changelog/2026-08-07-connecting-issues-and-multi-select-field-support",
+      "date": "AUG 7, 2026",
       "type": "Release",
-      "summary": "When you delegate a task to GitHub Copilot cloud agent, you can now set the reasoning level for models that support it. This allows you to control how much the…"
+      "summary": "GitHub is making it easier to connect related work and manage multiple field values across issues and projects. Connect related issues The new “Relates to” issue relationship is available in…"
     }
   ]
 }
