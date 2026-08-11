@@ -1,6 +1,20 @@
 {
-  "updatedAt": "AUG 10, 2026",
+  "updatedAt": "AUG 11, 2026",
   "items": [
+    {
+      "title": "Copilot on web expands conversation controls",
+      "url": "https://github.blog/changelog/2026-08-10-copilot-on-web-expands-conversation-controls",
+      "date": "AUG 10, 2026",
+      "type": "Improvement",
+      "summary": "We’ve made improvements to Copilot Chat on github.com that make it easier to use. These include easier access to your recent conversations in chat, the ability to minimize the chat…"
+    },
+    {
+      "title": "GitHub billing in India now supports automatic recurring payments",
+      "url": "https://github.blog/changelog/2026-08-10-github-billing-in-india-now-supports-automatic-recurring-payments",
+      "date": "AUG 10, 2026",
+      "type": "Improvement",
+      "summary": "Customers in India can now use eligible saved credit cards for automatic recurring payments on monthly and annual GitHub bills. This update uses a payment mandate, also known in the…"
+    },
     {
       "title": "GitHub Copilot weekly releases — August 3",
       "url": "https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3",
@@ -28,20 +42,6 @@
       "date": "AUG 7, 2026",
       "type": "Release",
       "summary": "Lite and Balanced effort levels for GitHub Copilot code review are now generally available. They let you match the depth of a review to the complexity and risk of a…"
-    },
-    {
-      "title": "Copilot usage metrics API adds agent app activity",
-      "url": "https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity",
-      "date": "AUG 7, 2026",
-      "type": "Improvement",
-      "summary": "Since agent apps arrived on GitHub, teams have been able to run agents from partners like Claude and Codex directly in their GitHub workflows. The Copilot usage metrics API now…"
-    },
-    {
-      "title": "“Relates to” issue relationship in public preview and multi-select fields is generally available",
-      "url": "https://github.blog/changelog/2026-08-07-connecting-issues-and-multi-select-field-support",
-      "date": "AUG 7, 2026",
-      "type": "Release",
-      "summary": "GitHub is making it easier to connect related work and manage multiple field values across issues and projects. Connect related issues The new “Relates to” issue relationship is available in…"
     }
   ]
 }
