@@ -1,6 +1,27 @@
 {
-  "updatedAt": "AUG 13, 2026",
+  "updatedAt": "AUG 14, 2026",
   "items": [
+    {
+      "title": "License data quality improvements",
+      "url": "https://github.blog/changelog/2026-08-13-license-data-quality-improvements",
+      "date": "AUG 13, 2026",
+      "type": "Improvement",
+      "summary": "GitHub now uses package registries like npmjs.org and PyPI to determine license information for software components in the dependency graph. This improves the accuracy and completeness of the licenses shown…"
+    },
+    {
+      "title": "Block users from comments in personal repositories",
+      "url": "https://github.blog/changelog/2026-08-13-block-users-from-comments-in-personal-repositories",
+      "date": "AUG 13, 2026",
+      "type": "Improvement",
+      "summary": "You can now block or unblock users directly from comments on pull requests and issues in repositories owned by personal GitHub accounts. To block or unblock a user: Open the…"
+    },
+    {
+      "title": "Gemini 3.7 Flash is now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-08-13-gemini-3-7-flash-is-now-available-in-github-copilot",
+      "date": "AUG 13, 2026",
+      "type": "Release",
+      "summary": "Gemini 3.7 Flash, Google’s latest Flash model, is now rolling out in GitHub Copilot. From our early testing, the model has made improvements in web and app development and agentic…"
+    },
     {
       "title": "Agent Plugins 1.0 in VS Code, Copilot CLI, and the Copilot app",
       "url": "https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app",
@@ -21,27 +42,6 @@
       "date": "AUG 11, 2026",
       "type": "Release",
       "summary": "GitHub Enterprise Server (GHES) 3.22 is now available and introduces new capabilities across the platform. Here are a few highlights in the 3.22 release: Administrators can configure Copilot CLI to…"
-    },
-    {
-      "title": "Copilot memory and Ollama in GitHub Copilot for JetBrains",
-      "url": "https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains",
-      "date": "AUG 11, 2026",
-      "type": "Release",
-      "summary": "This update brings persistent memory, local model access, and more enterprise controls to GitHub Copilot for JetBrains. It also improves everyday chat workflows and resolves reliability issues across MCP servers,…"
-    },
-    {
-      "title": "Automatically migrate branch protection rules to repository rulesets",
-      "url": "https://github.blog/changelog/2026-08-11-automatically-migrate-branch-protection-rules-to-repository-rulesets",
-      "date": "AUG 11, 2026",
-      "type": "Release",
-      "summary": "You can now convert your existing branch protection rules to repository rulesets directly from your repository settings. This helps you migrate to GitHub’s more flexible and scalable policy framework without…"
-    },
-    {
-      "title": "MAI-Code-1.1-Flash available in GitHub Copilot",
-      "url": "https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot",
-      "date": "AUG 11, 2026",
-      "type": "Release",
-      "summary": "MAI-Code-1.1-Flash, Microsoft’s latest small-tier coding model, is now rolling out in GitHub Copilot. Building on MAI-Code-1-Flash, it adds native vision support for image understanding and delivers improvements across coding quality,…"
     }
   ]
 }
