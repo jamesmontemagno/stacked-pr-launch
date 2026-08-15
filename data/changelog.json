@@ -1,6 +1,27 @@
 {
-  "updatedAt": "AUG 14, 2026",
+  "updatedAt": "AUG 15, 2026",
   "items": [
+    {
+      "title": "Multiple redirect URIs and token refresh for OAuth apps",
+      "url": "https://github.blog/changelog/2026-08-14-multiple-redirect-uris-and-token-refresh-for-oauth-apps",
+      "date": "AUG 14, 2026",
+      "type": "Improvement",
+      "summary": "We’ve released multiple updates to the OAuth app and GitHub App platforms to support more secure app development: OAuth apps can opt in to expiring access tokens and refresh tokens.…"
+    },
+    {
+      "title": "Grok 4.6 is now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot",
+      "date": "AUG 14, 2026",
+      "type": "Release",
+      "summary": "Grok 4.6, xAI’s latest reasoning model, is now rolling out in GitHub Copilot. It is designed for agentic coding and complex multi-step workflows. In our internal testing, Grok 4.6 showed…"
+    },
+    {
+      "title": "GitHub Copilot weekly releases — August 10",
+      "url": "https://github.blog/changelog/2026-08-13-github-copilot-weekly-releases-august-10",
+      "date": "AUG 14, 2026",
+      "type": "Release",
+      "summary": "From new models and portable plugins to smoother agent workflows, this week’s updates make GitHub Copilot more flexible across editors, the command line, and the Copilot app. GitHub Copilot, general…"
+    },
     {
       "title": "License data quality improvements",
       "url": "https://github.blog/changelog/2026-08-13-license-data-quality-improvements",
@@ -21,27 +42,6 @@
       "date": "AUG 13, 2026",
       "type": "Release",
       "summary": "Gemini 3.7 Flash, Google’s latest Flash model, is now rolling out in GitHub Copilot. From our early testing, the model has made improvements in web and app development and agentic…"
-    },
-    {
-      "title": "Agent Plugins 1.0 in VS Code, Copilot CLI, and the Copilot app",
-      "url": "https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app",
-      "date": "AUG 12, 2026",
-      "type": "Release",
-      "summary": "You can now build a plugin once and use it across all compatible agent clients. We published Agent Plugins 1.0 on August 6 with AWS, Anysphere, Microsoft, OpenAI, and Vercel.…"
-    },
-    {
-      "title": "Rule insights for organizations in public preview",
-      "url": "https://github.blog/changelog/2026-08-12-rule-insights-for-organizations-in-public-preview",
-      "date": "AUG 12, 2026",
-      "type": "Improvement",
-      "summary": "The rule insights dashboard is now in public preview at the organization level. You get a visual, high-level view of how GitHub evaluates and enforces your GitHub repository rulesets, so…"
-    },
-    {
-      "title": "GitHub Enterprise Server 3.22 release candidate",
-      "url": "https://github.blog/changelog/2026-08-11-github-enterprise-server-3-22-release-candidate",
-      "date": "AUG 11, 2026",
-      "type": "Release",
-      "summary": "GitHub Enterprise Server (GHES) 3.22 is now available and introduces new capabilities across the platform. Here are a few highlights in the 3.22 release: Administrators can configure Copilot CLI to…"
     }
   ]
 }
