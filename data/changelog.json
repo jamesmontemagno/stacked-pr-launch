@@ -1,6 +1,13 @@
 {
-  "updatedAt": "AUG 19, 2026",
+  "updatedAt": "AUG 20, 2026",
   "items": [
+    {
+      "title": "CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling",
+      "url": "https://github.blog/changelog/2026-08-19-codeql-2-26-3-improves-github-actions-queries-and-javascript-modeling",
+      "date": "AUG 19, 2026",
+      "type": "Improvement",
+      "summary": "CodeQL 2.26.3 adds JavaScript, TypeScript, and Vue source modeling and improves the accuracy of several GitHub Actions queries. CodeQL is the static analysis engine behind GitHub code scanning, which helps…"
+    },
     {
       "title": "Track organization code quality trends",
       "url": "https://github.blog/changelog/2026-08-19-track-organization-code-quality-trends",
@@ -35,13 +42,6 @@
       "date": "AUG 14, 2026",
       "type": "Release",
       "summary": "Grok 4.6, xAI’s latest reasoning model, is now rolling out in GitHub Copilot. It is designed for agentic coding and complex multi-step workflows. In our internal testing, Grok 4.6 showed…"
-    },
-    {
-      "title": "GitHub Copilot weekly releases — August 10",
-      "url": "https://github.blog/changelog/2026-08-13-github-copilot-weekly-releases-august-10",
-      "date": "AUG 14, 2026",
-      "type": "Release",
-      "summary": "From new models and portable plugins to smoother agent workflows, this week’s updates make GitHub Copilot more flexible across editors, the command line, and the Copilot app. GitHub Copilot, general…"
     }
   ]
 }
