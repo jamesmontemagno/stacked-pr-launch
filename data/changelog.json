@@ -1,47 +1,47 @@
 {
-  "updatedAt": "AUG 20, 2026",
+  "updatedAt": "AUG 21, 2026",
   "items": [
+    {
+      "title": "Pinning saved views to the repository issues sidebar is generally available and more",
+      "url": "https://github.blog/changelog/2026-08-20-pin-projects-views-and-milestones-to-the-repository-sidebar",
+      "date": "AUG 20, 2026",
+      "type": "Improvement",
+      "summary": "Pinning saved views to the repository issues sidebar You can now pin saved views⁠ to the repository issues sidebar, making the views you use most just one click away, even…"
+    },
+    {
+      "title": "Windows 11 arm64 VS2026 image generally available",
+      "url": "https://github.blog/changelog/2026-08-20-windows-11-arm64-vs2026-image-generally-available",
+      "date": "AUG 20, 2026",
+      "type": "Improvement",
+      "summary": "The Windows 11 arm64 image with Visual Studio 2026 is now generally available on standard and larger GitHub-hosted runners. To use it in GitHub Actions, update your workflow file to…"
+    },
+    {
+      "title": "Code scanning adds a mitigated alert dismissal reason",
+      "url": "https://github.blog/changelog/2026-08-20-code-scanning-adds-a-mitigated-alert-dismissal-reason",
+      "date": "AUG 20, 2026",
+      "type": "Release",
+      "summary": "You can now dismiss a code scanning alert with the reason Mitigated when a vulnerability remains in the code but external controls, such as a web application firewall or network…"
+    },
+    {
+      "title": "Separate GitHub Actions path for GitHub Code Quality",
+      "url": "https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality",
+      "date": "AUG 20, 2026",
+      "type": "Improvement",
+      "summary": "A dedicated workflow path for code quality CodeQL actions workflows is now generally available. Your workflow run history and your Actions usage reports now tell GitHub Code Quality runs apart…"
+    },
+    {
+      "title": "Track GitHub Code Quality enablement changes in the audit log",
+      "url": "https://github.blog/changelog/2026-08-20-track-github-code-quality-enablement-changes-in-the-audit-log",
+      "date": "AUG 20, 2026",
+      "type": "Improvement",
+      "summary": "GitHub Code Quality now writes an audit log event whenever someone enables, disables, or changes its settings on a repository. Three new events give you that history: repo.code_quality_enabled records when…"
+    },
     {
       "title": "CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling",
       "url": "https://github.blog/changelog/2026-08-19-codeql-2-26-3-improves-github-actions-queries-and-javascript-modeling",
       "date": "AUG 19, 2026",
       "type": "Improvement",
       "summary": "CodeQL 2.26.3 adds JavaScript, TypeScript, and Vue source modeling and improves the accuracy of several GitHub Actions queries. CodeQL is the static analysis engine behind GitHub code scanning, which helps…"
-    },
-    {
-      "title": "Track organization code quality trends",
-      "url": "https://github.blog/changelog/2026-08-19-track-organization-code-quality-trends",
-      "date": "AUG 19, 2026",
-      "type": "Improvement",
-      "summary": "The organization-level Code Quality dashboard now includes a Trends tab that shows how code quality has changed across your repositories over time. Instead of a point-in-time snapshot, you can see…"
-    },
-    {
-      "title": "Enterprise managed settings in GitHub Copilot for JetBrains",
-      "url": "https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains",
-      "date": "AUG 18, 2026",
-      "type": "Release",
-      "summary": "GitHub Copilot for JetBrains now supports enterprise managed settings for plugin governance, MCP server access, OpenTelemetry, and permission modes. Administrators can now apply consistent controls for everyone on your enterprise’s…"
-    },
-    {
-      "title": "Credential revocation and deauthorization by token type",
-      "url": "https://github.blog/changelog/2026-08-18-credential-revocation-and-deauthorization-by-token-type",
-      "date": "AUG 18, 2026",
-      "type": "Improvement",
-      "summary": "Building on our self-service credential revocation experiences for incident response, you can now take token-type and user-specific actions to deauthorize and revoke user credentials during a security incident. This gives…"
-    },
-    {
-      "title": "Multiple redirect URIs and token refresh for OAuth apps",
-      "url": "https://github.blog/changelog/2026-08-14-multiple-redirect-uris-and-token-refresh-for-oauth-apps",
-      "date": "AUG 14, 2026",
-      "type": "Improvement",
-      "summary": "We’ve released multiple updates to the OAuth app and GitHub App platforms to support more secure app development: OAuth apps can opt in to expiring access tokens and refresh tokens.…"
-    },
-    {
-      "title": "Grok 4.6 is now available in GitHub Copilot",
-      "url": "https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot",
-      "date": "AUG 14, 2026",
-      "type": "Release",
-      "summary": "Grok 4.6, xAI’s latest reasoning model, is now rolling out in GitHub Copilot. It is designed for agentic coding and complex multi-step workflows. In our internal testing, Grok 4.6 showed…"
     }
   ]
 }
