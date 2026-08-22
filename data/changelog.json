@@ -1,6 +1,27 @@
 {
-  "updatedAt": "AUG 21, 2026",
+  "updatedAt": "AUG 22, 2026",
   "items": [
+    {
+      "title": "Better tools for managing blocked users",
+      "url": "https://github.blog/changelog/2026-08-21-better-tools-for-managing-blocked-users",
+      "date": "AUG 21, 2026",
+      "type": "Improvement",
+      "summary": "Managing blocked users is now faster and clearer for personal accounts and organizations. With this update, you can: Search by username, full name, or email. Sort and paginate long lists.…"
+    },
+    {
+      "title": "The new GitHub Copilot experience in Slack",
+      "url": "https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack",
+      "date": "AUG 21, 2026",
+      "type": "Release",
+      "summary": "The GitHub integration in Slack now brings the agentic capabilities of GitHub Copilot CLI and the GitHub Copilot app into Slack in public preview. You can work with @GitHub to…"
+    },
+    {
+      "title": "Shared agentic work with GitHub Copilot in Microsoft Teams",
+      "url": "https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams",
+      "date": "AUG 21, 2026",
+      "type": "Release",
+      "summary": "Turn a Microsoft Teams discussion into a collaborative agent session everyone can see and help direct. Mention @GitHub in a channel, thread, or direct message to start a GitHub Copilot…"
+    },
     {
       "title": "Pinning saved views to the repository issues sidebar is generally available and more",
       "url": "https://github.blog/changelog/2026-08-20-pin-projects-views-and-milestones-to-the-repository-sidebar",
@@ -21,27 +42,6 @@
       "date": "AUG 20, 2026",
       "type": "Release",
       "summary": "You can now dismiss a code scanning alert with the reason Mitigated when a vulnerability remains in the code but external controls, such as a web application firewall or network…"
-    },
-    {
-      "title": "Separate GitHub Actions path for GitHub Code Quality",
-      "url": "https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality",
-      "date": "AUG 20, 2026",
-      "type": "Improvement",
-      "summary": "A dedicated workflow path for code quality CodeQL actions workflows is now generally available. Your workflow run history and your Actions usage reports now tell GitHub Code Quality runs apart…"
-    },
-    {
-      "title": "Track GitHub Code Quality enablement changes in the audit log",
-      "url": "https://github.blog/changelog/2026-08-20-track-github-code-quality-enablement-changes-in-the-audit-log",
-      "date": "AUG 20, 2026",
-      "type": "Improvement",
-      "summary": "GitHub Code Quality now writes an audit log event whenever someone enables, disables, or changes its settings on a repository. Three new events give you that history: repo.code_quality_enabled records when…"
-    },
-    {
-      "title": "CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling",
-      "url": "https://github.blog/changelog/2026-08-19-codeql-2-26-3-improves-github-actions-queries-and-javascript-modeling",
-      "date": "AUG 19, 2026",
-      "type": "Improvement",
-      "summary": "CodeQL 2.26.3 adds JavaScript, TypeScript, and Vue source modeling and improves the accuracy of several GitHub Actions queries. CodeQL is the static analysis engine behind GitHub code scanning, which helps…"
     }
   ]
 }
