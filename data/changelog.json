@@ -1,6 +1,34 @@
 {
-  "updatedAt": "AUG 25, 2026",
+  "updatedAt": "AUG 26, 2026",
   "items": [
+    {
+      "title": "Rule insights dashboard generally available",
+      "url": "https://github.blog/changelog/2026-08-25-rule-insights-dashboard-generally-available",
+      "date": "AUG 25, 2026",
+      "type": "Improvement",
+      "summary": "The rule insights dashboard is now generally available at both the repository and organization levels. You get a visual, high-level view of how GitHub evaluates and enforces your GitHub repository…"
+    },
+    {
+      "title": "GitHub Copilot app Customize tab is generally available",
+      "url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+      "date": "AUG 25, 2026",
+      "type": "Release",
+      "summary": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP…"
+    },
+    {
+      "title": "Block users directly from security advisories",
+      "url": "https://github.blog/changelog/2026-08-25-block-users-directly-from-security-advisories",
+      "date": "AUG 25, 2026",
+      "type": "Improvement",
+      "summary": "You can now block a user directly from a security advisory page in public repositories owned by either an organization or a personal account. This brings the streamlined moderation experience…"
+    },
+    {
+      "title": "Push rules in rulesets now support path exceptions",
+      "url": "https://github.blog/changelog/2026-08-25-push-rules-in-rulesets-now-support-path-exceptions",
+      "date": "AUG 25, 2026",
+      "type": "Improvement",
+      "summary": "You can now configure push rules more granularly by exempting specific file paths, so a rule applies everywhere in scope except the paths you choose. Path exceptions are in public…"
+    },
     {
       "title": "Better tools for managing blocked users",
       "url": "https://github.blog/changelog/2026-08-21-better-tools-for-managing-blocked-users",
@@ -14,34 +42,6 @@
       "date": "AUG 21, 2026",
       "type": "Release",
       "summary": "The GitHub integration in Slack now brings the agentic capabilities of GitHub Copilot CLI and the GitHub Copilot app into Slack in public preview. You can work with @GitHub to…"
-    },
-    {
-      "title": "Shared agentic work with GitHub Copilot in Microsoft Teams",
-      "url": "https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams",
-      "date": "AUG 21, 2026",
-      "type": "Release",
-      "summary": "Turn a Microsoft Teams discussion into a collaborative agent session everyone can see and help direct. Mention @GitHub in a channel, thread, or direct message to start a GitHub Copilot…"
-    },
-    {
-      "title": "Pinning saved views to the repository issues sidebar is generally available and more",
-      "url": "https://github.blog/changelog/2026-08-20-pin-projects-views-and-milestones-to-the-repository-sidebar",
-      "date": "AUG 20, 2026",
-      "type": "Improvement",
-      "summary": "Pinning saved views to the repository issues sidebar You can now pin saved views⁠ to the repository issues sidebar, making the views you use most just one click away, even…"
-    },
-    {
-      "title": "Windows 11 arm64 VS2026 image generally available",
-      "url": "https://github.blog/changelog/2026-08-20-windows-11-arm64-vs2026-image-generally-available",
-      "date": "AUG 20, 2026",
-      "type": "Improvement",
-      "summary": "The Windows 11 arm64 image with Visual Studio 2026 is now generally available on standard and larger GitHub-hosted runners. To use it in GitHub Actions, update your workflow file to…"
-    },
-    {
-      "title": "Code scanning adds a mitigated alert dismissal reason",
-      "url": "https://github.blog/changelog/2026-08-20-code-scanning-adds-a-mitigated-alert-dismissal-reason",
-      "date": "AUG 20, 2026",
-      "type": "Release",
-      "summary": "You can now dismiss a code scanning alert with the reason Mitigated when a vulnerability remains in the code but external controls, such as a web application firewall or network…"
     }
   ]
 }
