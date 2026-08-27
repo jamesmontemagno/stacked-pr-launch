@@ -1,6 +1,34 @@
 {
-  "updatedAt": "AUG 26, 2026",
+  "updatedAt": "AUG 27, 2026",
   "items": [
+    {
+      "title": "Close all open contributions authored by a blocked user",
+      "url": "https://github.blog/changelog/2026-08-27-close-all-open-contributions-authored-by-a-blocked-user",
+      "date": "AUG 27, 2026",
+      "type": "Improvement",
+      "summary": "You can now automatically close all open issues, discussions, and pull requests authored by a user when you block them from your personal account or organization. To use this option,…"
+    },
+    {
+      "title": "Enterprise-managed settings now support autoUpdate for plugin marketplaces",
+      "url": "https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces",
+      "date": "AUG 27, 2026",
+      "type": "Improvement",
+      "summary": "You can now opt individual plugin marketplaces into automatic updates by setting autoUpdate: true on an extraKnownMarketplaces entry in enterprise managed settings. Supported clients automatically check the marketplace and update…"
+    },
+    {
+      "title": "Global model policy generally available",
+      "url": "https://github.blog/changelog/2026-08-26-global-model-policy-generally-available",
+      "date": "AUG 26, 2026",
+      "type": "Improvement",
+      "summary": "In July, we announced a default model policy for generally available GitHub Copilot models on Copilot Business and Copilot Enterprise plans. Starting today, we’re gradually rolling out enforcement of the…"
+    },
+    {
+      "title": "GitHub Apps can now access enterprise billing data",
+      "url": "https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data",
+      "date": "AUG 26, 2026",
+      "type": "Release",
+      "summary": "Enterprise owners can now grant a GitHub App access to enterprise billing data. When you create or configure a GitHub App, you can select the enterprise billing permission and choose…"
+    },
     {
       "title": "Rule insights dashboard generally available",
       "url": "https://github.blog/changelog/2026-08-25-rule-insights-dashboard-generally-available",
@@ -14,34 +42,6 @@
       "date": "AUG 25, 2026",
       "type": "Release",
       "summary": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP…"
-    },
-    {
-      "title": "Block users directly from security advisories",
-      "url": "https://github.blog/changelog/2026-08-25-block-users-directly-from-security-advisories",
-      "date": "AUG 25, 2026",
-      "type": "Improvement",
-      "summary": "You can now block a user directly from a security advisory page in public repositories owned by either an organization or a personal account. This brings the streamlined moderation experience…"
-    },
-    {
-      "title": "Push rules in rulesets now support path exceptions",
-      "url": "https://github.blog/changelog/2026-08-25-push-rules-in-rulesets-now-support-path-exceptions",
-      "date": "AUG 25, 2026",
-      "type": "Improvement",
-      "summary": "You can now configure push rules more granularly by exempting specific file paths, so a rule applies everywhere in scope except the paths you choose. Path exceptions are in public…"
-    },
-    {
-      "title": "Better tools for managing blocked users",
-      "url": "https://github.blog/changelog/2026-08-21-better-tools-for-managing-blocked-users",
-      "date": "AUG 21, 2026",
-      "type": "Improvement",
-      "summary": "Managing blocked users is now faster and clearer for personal accounts and organizations. With this update, you can: Search by username, full name, or email. Sort and paginate long lists.…"
-    },
-    {
-      "title": "The new GitHub Copilot experience in Slack",
-      "url": "https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack",
-      "date": "AUG 21, 2026",
-      "type": "Release",
-      "summary": "The GitHub integration in Slack now brings the agentic capabilities of GitHub Copilot CLI and the GitHub Copilot app into Slack in public preview. You can work with @GitHub to…"
     }
   ]
 }
