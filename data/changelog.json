@@ -1,6 +1,27 @@
 {
-  "updatedAt": "AUG 27, 2026",
+  "updatedAt": "AUG 28, 2026",
   "items": [
+    {
+      "title": "Upcoming changes to GitHub Copilot policies and billing",
+      "url": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing",
+      "date": "AUG 28, 2026",
+      "type": "Improvement",
+      "summary": "To provide a strong, consistent Copilot experience, we’re making three separate, upcoming changes to Copilot policies and billing. Please review the upcoming updates to understand what may impact you. Reopening…"
+    },
+    {
+      "title": "Better label management on issues is generally available",
+      "url": "https://github.blog/changelog/2026-08-27-label-archiving-is-generally-available",
+      "date": "AUG 27, 2026",
+      "type": "Improvement",
+      "summary": "We’re making it easier to keep labels organized and find the right one, especially in repositories with long and growing label lists. Suggested Labels You can now find the right…"
+    },
+    {
+      "title": "Copilot code review: Resolution reasons and expanded capabilities",
+      "url": "https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities",
+      "date": "AUG 27, 2026",
+      "type": "Improvement",
+      "summary": "Copilot code review can now review two types of pull requests it didn’t cover before: Reviews requested automatically on pull requests authored by bots, including Copilot cloud agent Very large…"
+    },
     {
       "title": "Close all open contributions authored by a blocked user",
       "url": "https://github.blog/changelog/2026-08-27-close-all-open-contributions-authored-by-a-blocked-user",
@@ -21,27 +42,6 @@
       "date": "AUG 26, 2026",
       "type": "Improvement",
       "summary": "In July, we announced a default model policy for generally available GitHub Copilot models on Copilot Business and Copilot Enterprise plans. Starting today, we’re gradually rolling out enforcement of the…"
-    },
-    {
-      "title": "GitHub Apps can now access enterprise billing data",
-      "url": "https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data",
-      "date": "AUG 26, 2026",
-      "type": "Release",
-      "summary": "Enterprise owners can now grant a GitHub App access to enterprise billing data. When you create or configure a GitHub App, you can select the enterprise billing permission and choose…"
-    },
-    {
-      "title": "Rule insights dashboard generally available",
-      "url": "https://github.blog/changelog/2026-08-25-rule-insights-dashboard-generally-available",
-      "date": "AUG 25, 2026",
-      "type": "Improvement",
-      "summary": "The rule insights dashboard is now generally available at both the repository and organization levels. You get a visual, high-level view of how GitHub evaluates and enforces your GitHub repository…"
-    },
-    {
-      "title": "GitHub Copilot app Customize tab is generally available",
-      "url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
-      "date": "AUG 25, 2026",
-      "type": "Release",
-      "summary": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP…"
     }
   ]
 }
