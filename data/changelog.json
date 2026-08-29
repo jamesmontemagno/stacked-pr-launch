@@ -1,6 +1,20 @@
 {
-  "updatedAt": "AUG 28, 2026",
+  "updatedAt": "AUG 29, 2026",
   "items": [
+    {
+      "title": "GitHub Copilot in Visual Studio — August update",
+      "url": "https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2",
+      "date": "AUG 28, 2026",
+      "type": "Release",
+      "summary": "August 2026 brought more control over how GitHub Copilot reasons, which models you use, how teams share specialized agents, and when you ask for a code review. Highlights Here’s what’s…"
+    },
+    {
+      "title": "GitHub Copilot weekly releases — August 24",
+      "url": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24",
+      "date": "AUG 28, 2026",
+      "type": "Release",
+      "summary": "This week’s updates give you more control over how Copilot runs, from team sessions in Slack and Teams to customization across the app, CLI, and your IDE. GitHub Copilot in…"
+    },
     {
       "title": "Upcoming changes to GitHub Copilot policies and billing",
       "url": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing",
@@ -28,20 +42,6 @@
       "date": "AUG 27, 2026",
       "type": "Improvement",
       "summary": "You can now automatically close all open issues, discussions, and pull requests authored by a user when you block them from your personal account or organization. To use this option,…"
-    },
-    {
-      "title": "Enterprise-managed settings now support autoUpdate for plugin marketplaces",
-      "url": "https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces",
-      "date": "AUG 27, 2026",
-      "type": "Improvement",
-      "summary": "You can now opt individual plugin marketplaces into automatic updates by setting autoUpdate: true on an extraKnownMarketplaces entry in enterprise managed settings. Supported clients automatically check the marketplace and update…"
-    },
-    {
-      "title": "Global model policy generally available",
-      "url": "https://github.blog/changelog/2026-08-26-global-model-policy-generally-available",
-      "date": "AUG 26, 2026",
-      "type": "Improvement",
-      "summary": "In July, we announced a default model policy for generally available GitHub Copilot models on Copilot Business and Copilot Enterprise plans. Starting today, we’re gradually rolling out enforcement of the…"
     }
   ]
 }
