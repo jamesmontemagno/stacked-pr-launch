@@ -1,6 +1,13 @@
 {
-  "updatedAt": "AUG 31, 2026",
+  "updatedAt": "SEP 1, 2026",
   "items": [
+    {
+      "title": "GitHub Copilot in VS Code, August 2026 releases",
+      "url": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases",
+      "date": "AUG 31, 2026",
+      "type": "Release",
+      "summary": "This changelog covers VS Code v1.132 through v1.135, shipped throughout August 2026. These releases make it easier to organize agent sessions, review changes, and navigate long conversations. Agent Host, the…"
+    },
     {
       "title": "GitHub Copilot in Visual Studio — August update",
       "url": "https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2",
@@ -35,13 +42,6 @@
       "date": "AUG 27, 2026",
       "type": "Improvement",
       "summary": "Copilot code review can now review two types of pull requests it didn’t cover before: Reviews requested automatically on pull requests authored by bots, including Copilot cloud agent Very large…"
-    },
-    {
-      "title": "Close all open contributions authored by a blocked user",
-      "url": "https://github.blog/changelog/2026-08-27-close-all-open-contributions-authored-by-a-blocked-user",
-      "date": "AUG 27, 2026",
-      "type": "Improvement",
-      "summary": "You can now automatically close all open issues, discussions, and pull requests authored by a user when you block them from your personal account or organization. To use this option,…"
     }
   ]
 }
