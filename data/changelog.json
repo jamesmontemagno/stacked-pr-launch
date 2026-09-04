@@ -1,47 +1,47 @@
 {
-  "updatedAt": "SEP 3, 2026",
+  "updatedAt": "SEP 4, 2026",
   "items": [
+    {
+      "title": "Multiple trusted publishing configurations for npm",
+      "url": "https://github.blog/changelog/2026-09-03-multiple-trusted-publishing-configurations-for-npm",
+      "date": "SEP 3, 2026",
+      "type": "Release",
+      "summary": "We’re continuing to make trusted publishing smoother for npm publishers, guided by maintainers feedback. Three updates to npm publishing are now generally available: Multiple trusted publishing configurations per package Staged…"
+    },
+    {
+      "title": "GitHub Actions: Early September 2026 updates",
+      "url": "https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates",
+      "date": "SEP 3, 2026",
+      "type": "Improvement",
+      "summary": "GitHub Actions now includes three updates that give you clearer visibility and finer-grained control over your workflows. New REST API for runner version deprecations A new REST API returns when…"
+    },
+    {
+      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
+      "date": "SEP 3, 2026",
+      "type": "Release",
+      "summary": "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot. In our early testing, Gemini 3.8 Flash performed strongly on complex terminal-based coding tasks and demonstrated rigorous…"
+    },
+    {
+      "title": "Reopening Copilot Business and Enterprise signups",
+      "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups",
+      "date": "SEP 3, 2026",
+      "type": "Release",
+      "summary": "We’re gradually reopening sign-ups for Copilot Business and Copilot Enterprise customers paying by credit card or PayPal over the next couple of weeks. If you’ve been waiting to get started…"
+    },
+    {
+      "title": "CodeQL 2.26.4 improves GitHub actions security detections",
+      "url": "https://github.blog/changelog/2026-09-03-codeql-2-26-4-improves-github-actions-security-detections",
+      "date": "SEP 3, 2026",
+      "type": "Improvement",
+      "summary": "CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We’ve recently released CodeQL 2.26.4, which adds support for Go 1.27,…"
+    },
     {
       "title": "Enterprise-managed settings support any default model",
       "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model",
       "date": "SEP 2, 2026",
       "type": "Improvement",
       "summary": "You can now set your preferred GitHub Copilot model as the default for new conversations through enterprise-managed settings. This lets you choose the default model that best fits your workflows.…"
-    },
-    {
-      "title": "Content exclusions generally available in Copilot app and CLI",
-      "url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli",
-      "date": "SEP 2, 2026",
-      "type": "Release",
-      "summary": "The GitHub Copilot app and Copilot CLI now respect content exclusion policies configured by enterprise, organization, and repository administrators. Copilot won’t use excluded files as context, helping you protect sensitive…"
-    },
-    {
-      "title": "Enterprise Live Migrations from GHES to ghe.com generally available",
-      "url": "https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available",
-      "date": "SEP 1, 2026",
-      "type": "Release",
-      "summary": "Enterprise Live Migrations (ELM) is now generally available, enabling near-zero-downtime repository migrations from GitHub Enterprise Server (GHES) to GitHub Enterprise Cloud with Data Residency (GHEC DR), so you can move…"
-    },
-    {
-      "title": "Set an expiration date for individual user budgets",
-      "url": "https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets",
-      "date": "SEP 1, 2026",
-      "type": "Improvement",
-      "summary": "You can now set an optional expiration date on an individual user budget, and GitHub removes the budget on that date. This capability is generally available. The user then falls…"
-    },
-    {
-      "title": "Copilot code review can now approve pull requests",
-      "url": "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests",
-      "date": "SEP 1, 2026",
-      "type": "Release",
-      "summary": "Copilot now tells you when a pull request is ready to approve, and admins can authorize it to sign off on approval. The ability for Copilot to approve is off…"
-    },
-    {
-      "title": "Block users from discussion comments in personal repositories",
-      "url": "https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories",
-      "date": "SEP 1, 2026",
-      "type": "Improvement",
-      "summary": "You can now block or unblock users directly from discussion comments in repositories owned by personal GitHub accounts, extending the in-context blocking controls already available for issue and pull request…"
     }
   ]
 }
