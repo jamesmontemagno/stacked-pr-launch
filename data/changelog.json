@@ -1,6 +1,34 @@
 {
-  "updatedAt": "SEP 8, 2026",
+  "updatedAt": "SEP 9, 2026",
   "items": [
+    {
+      "title": "Enterprise-managed sandbox in Copilot for JetBrains",
+      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains",
+      "date": "SEP 9, 2026",
+      "type": "Release",
+      "summary": "This update brings support for enterprise-managed sandbox policies, cross-file cursor jumps for next edit suggestions, global project context in chat, enterprise policy diagnostics, and a new connection between terminal Copilot…"
+    },
+    {
+      "title": "GitHub Enterprise Server 3.22 is now generally available",
+      "url": "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available",
+      "date": "SEP 8, 2026",
+      "type": "Release",
+      "summary": "GitHub Enterprise Server (GHES) 3.22 is now available and introduces new capabilities across the platform. Here are a few highlights in the 3.22 release: Administrators can configure Copilot CLI to…"
+    },
+    {
+      "title": "New customer portal help.github.com",
+      "url": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com",
+      "date": "SEP 8, 2026",
+      "type": "Release",
+      "summary": "The support portal has been redesigned and moved to a new home at help.github.com. It brings support, docs, learning, community, and account resources together in one place with Copilot-powered search…"
+    },
+    {
+      "title": "Automatic Dependabot access to GitHub-hosted registries",
+      "url": "https://github.blog/changelog/2026-09-08-automatic-dependabot-access-to-github-hosted-registries",
+      "date": "SEP 8, 2026",
+      "type": "Improvement",
+      "summary": "Dependabot can now read from private GitHub Packages registries without a personal access token. If a package has granted your repository access through “Manage Actions access” in the package settings,…"
+    },
     {
       "title": "GitHub Copilot weekly releases — August 31",
       "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31",
@@ -14,34 +42,6 @@
       "date": "SEP 4, 2026",
       "type": "Release",
       "summary": "GPT-6 Astra from OpenAI is now available in GitHub Copilot. OpenAI’s latest general-purpose model, GPT-6 Astra, is designed for long-horizon, autonomous coding and agentic tasks. In our internal testing, GPT-6…"
-    },
-    {
-      "title": "New API endpoint provides privacy-safe star history data",
-      "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data",
-      "date": "SEP 4, 2026",
-      "type": "Release",
-      "summary": "Track repository star growth over time with the new star history REST API endpoint without exposing stargazer identities. Earlier this year, stargazer listing endpoints were restricted to admins and collaborators…"
-    },
-    {
-      "title": "Multiple trusted publishing configurations for npm",
-      "url": "https://github.blog/changelog/2026-09-03-multiple-trusted-publishing-configurations-for-npm",
-      "date": "SEP 3, 2026",
-      "type": "Release",
-      "summary": "We’re continuing to make trusted publishing smoother for npm publishers, guided by maintainers feedback. Three updates to npm publishing are now generally available: Multiple trusted publishing configurations per package Staged…"
-    },
-    {
-      "title": "GitHub Actions: Early September 2026 updates",
-      "url": "https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates",
-      "date": "SEP 3, 2026",
-      "type": "Improvement",
-      "summary": "GitHub Actions now includes three updates that give you clearer visibility and finer-grained control over your workflows. New REST API for runner version deprecations A new REST API returns when…"
-    },
-    {
-      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
-      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
-      "date": "SEP 3, 2026",
-      "type": "Release",
-      "summary": "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot. In our early testing, Gemini 3.8 Flash performed strongly on complex terminal-based coding tasks and demonstrated rigorous…"
     }
   ]
 }
