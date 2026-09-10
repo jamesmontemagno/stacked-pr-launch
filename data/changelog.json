@@ -1,47 +1,47 @@
 {
-  "updatedAt": "SEP 9, 2026",
+  "updatedAt": "SEP 10, 2026",
   "items": [
+    {
+      "title": "CodeQL 2.27.0 adds support for Linux ARM64",
+      "url": "https://github.blog/changelog/2026-09-09-codeql-2-27-0-adds-support-for-linux-arm64",
+      "date": "SEP 9, 2026",
+      "type": "Improvement",
+      "summary": "CodeQL 2.27.0 is now available on Linux ARM64, adds a new Rust security query, expanded framework coverage for Java/Kotlin and C#, and analysis accuracy improvements across multiple languages. CodeQL is…"
+    },
+    {
+      "title": "Enterprise managed permissions for GitHub Copilot agent operations",
+      "url": "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations",
+      "date": "SEP 9, 2026",
+      "type": "Improvement",
+      "summary": "If you administer GitHub Copilot Business or GitHub Copilot Enterprise, you can now centrally control which agent operations are blocked, require human approval, or can proceed without a prompt. Managed…"
+    },
+    {
+      "title": "GitHub Advanced Security expands trial availability",
+      "url": "https://github.blog/changelog/2026-09-09-github-advanced-security-expands-trial-availability",
+      "date": "SEP 9, 2026",
+      "type": "Improvement",
+      "summary": "More GitHub Enterprise Cloud customers can now start a self-serve GitHub Advanced Security trial to evaluate GitHub Code Security and GitHub Secret Protection. Eligibility has expanded from enterprises with up…"
+    },
+    {
+      "title": "Block pull requests with exposed secrets from merging",
+      "url": "https://github.blog/changelog/2026-09-09-block-pull-requests-with-exposed-secrets-from-merging",
+      "date": "SEP 9, 2026",
+      "type": "Improvement",
+      "summary": "Repository rulesets allow you to easily add scalable protections across your repositories. Starting today, you can use repository rulesets to block pull requests from merging when the pull request introduces…"
+    },
+    {
+      "title": "Remediate Code Quality findings with agentic autofix",
+      "url": "https://github.blog/changelog/2026-09-09-remediate-code-quality-findings-with-agentic-autofix",
+      "date": "SEP 9, 2026",
+      "type": "Release",
+      "summary": "Agentic autofix is now available to help you burn down findings in your code quality backlog. You can select up to 25 standard findings on a page and assign the…"
+    },
     {
       "title": "Enterprise-managed sandbox in Copilot for JetBrains",
       "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains",
       "date": "SEP 9, 2026",
       "type": "Release",
       "summary": "This update brings support for enterprise-managed sandbox policies, cross-file cursor jumps for next edit suggestions, global project context in chat, enterprise policy diagnostics, and a new connection between terminal Copilot…"
-    },
-    {
-      "title": "GitHub Enterprise Server 3.22 is now generally available",
-      "url": "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available",
-      "date": "SEP 8, 2026",
-      "type": "Release",
-      "summary": "GitHub Enterprise Server (GHES) 3.22 is now available and introduces new capabilities across the platform. Here are a few highlights in the 3.22 release: Administrators can configure Copilot CLI to…"
-    },
-    {
-      "title": "New customer portal help.github.com",
-      "url": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com",
-      "date": "SEP 8, 2026",
-      "type": "Release",
-      "summary": "The support portal has been redesigned and moved to a new home at help.github.com. It brings support, docs, learning, community, and account resources together in one place with Copilot-powered search…"
-    },
-    {
-      "title": "Automatic Dependabot access to GitHub-hosted registries",
-      "url": "https://github.blog/changelog/2026-09-08-automatic-dependabot-access-to-github-hosted-registries",
-      "date": "SEP 8, 2026",
-      "type": "Improvement",
-      "summary": "Dependabot can now read from private GitHub Packages registries without a personal access token. If a package has granted your repository access through “Manage Actions access” in the package settings,…"
-    },
-    {
-      "title": "GitHub Copilot weekly releases — August 31",
-      "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31",
-      "date": "SEP 4, 2026",
-      "type": "Release",
-      "summary": "This week, GitHub Copilot expands model choice and content protections, while VS Code adds new ways to manage agent sessions and get pull requests merge-ready. GitHub Copilot, general Claude Fable…"
-    },
-    {
-      "title": "GPT-6 Astra is generally available in GitHub Copilot",
-      "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
-      "date": "SEP 4, 2026",
-      "type": "Release",
-      "summary": "GPT-6 Astra from OpenAI is now available in GitHub Copilot. OpenAI’s latest general-purpose model, GPT-6 Astra, is designed for long-horizon, autonomous coding and agentic tasks. In our internal testing, GPT-6…"
     }
   ]
 }
