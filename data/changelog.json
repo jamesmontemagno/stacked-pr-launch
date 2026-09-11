@@ -1,47 +1,47 @@
 {
-  "updatedAt": "SEP 10, 2026",
+  "updatedAt": "SEP 11, 2026",
   "items": [
+    {
+      "title": "Refreshed repository pull requests page in public preview",
+      "url": "https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview",
+      "date": "SEP 10, 2026",
+      "type": "Release",
+      "summary": "A refreshed repository-level pull request listing page is now in public preview for all GitHub users. It brings powerful filtering, compact presentation mode, and more. Highlights The new page makes…"
+    },
+    {
+      "title": "AI Scan for pull request APIs in public preview",
+      "url": "https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview",
+      "date": "SEP 10, 2026",
+      "type": "Improvement",
+      "summary": "You can now manage GitHub code scanning’s AI Scan for pull request enablement with REST API endpoints at the organization and repository levels. This public preview gives teams a programmatic…"
+    },
+    {
+      "title": "Control GitHub Actions cache access with cache-mode",
+      "url": "https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode",
+      "date": "SEP 10, 2026",
+      "type": "Improvement",
+      "summary": "You can now use cache-mode to apply least-privilege access to the GitHub Actions cache at the workflow or job level. By granting each workflow or job only the cache access…"
+    },
+    {
+      "title": "Xcode 27 runner image now runs on macOS 27",
+      "url": "https://github.blog/changelog/2026-09-10-xcode-27-runner-image-now-runs-on-macos-27",
+      "date": "SEP 10, 2026",
+      "type": "Improvement",
+      "summary": "You can now validate your Apple apps against macOS 27 using the Xcode 27 runner image for GitHub-hosted macOS runners, available in public preview. The image previously ran on macOS…"
+    },
+    {
+      "title": "npm extends recovery-code security holds to all accounts",
+      "url": "https://github.blog/changelog/2026-09-09-npm-extends-recovery-code-security-holds-to-all-accounts",
+      "date": "SEP 9, 2026",
+      "type": "Improvement",
+      "summary": "npm now places a temporary 72-hour security hold on any account after a successful recovery-code sign-in, extending a protection that previously applied only to high-impact accounts. This change applies to…"
+    },
     {
       "title": "CodeQL 2.27.0 adds support for Linux ARM64",
       "url": "https://github.blog/changelog/2026-09-09-codeql-2-27-0-adds-support-for-linux-arm64",
       "date": "SEP 9, 2026",
       "type": "Improvement",
       "summary": "CodeQL 2.27.0 is now available on Linux ARM64, adds a new Rust security query, expanded framework coverage for Java/Kotlin and C#, and analysis accuracy improvements across multiple languages. CodeQL is…"
-    },
-    {
-      "title": "Enterprise managed permissions for GitHub Copilot agent operations",
-      "url": "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations",
-      "date": "SEP 9, 2026",
-      "type": "Improvement",
-      "summary": "If you administer GitHub Copilot Business or GitHub Copilot Enterprise, you can now centrally control which agent operations are blocked, require human approval, or can proceed without a prompt. Managed…"
-    },
-    {
-      "title": "GitHub Advanced Security expands trial availability",
-      "url": "https://github.blog/changelog/2026-09-09-github-advanced-security-expands-trial-availability",
-      "date": "SEP 9, 2026",
-      "type": "Improvement",
-      "summary": "More GitHub Enterprise Cloud customers can now start a self-serve GitHub Advanced Security trial to evaluate GitHub Code Security and GitHub Secret Protection. Eligibility has expanded from enterprises with up…"
-    },
-    {
-      "title": "Block pull requests with exposed secrets from merging",
-      "url": "https://github.blog/changelog/2026-09-09-block-pull-requests-with-exposed-secrets-from-merging",
-      "date": "SEP 9, 2026",
-      "type": "Improvement",
-      "summary": "Repository rulesets allow you to easily add scalable protections across your repositories. Starting today, you can use repository rulesets to block pull requests from merging when the pull request introduces…"
-    },
-    {
-      "title": "Remediate Code Quality findings with agentic autofix",
-      "url": "https://github.blog/changelog/2026-09-09-remediate-code-quality-findings-with-agentic-autofix",
-      "date": "SEP 9, 2026",
-      "type": "Release",
-      "summary": "Agentic autofix is now available to help you burn down findings in your code quality backlog. You can select up to 25 standard findings on a page and assign the…"
-    },
-    {
-      "title": "Enterprise-managed sandbox in Copilot for JetBrains",
-      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains",
-      "date": "SEP 9, 2026",
-      "type": "Release",
-      "summary": "This update brings support for enterprise-managed sandbox policies, cross-file cursor jumps for next edit suggestions, global project context in chat, enterprise policy diagnostics, and a new connection between terminal Copilot…"
     }
   ]
 }
