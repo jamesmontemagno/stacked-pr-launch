@@ -1,6 +1,27 @@
 {
-  "updatedAt": "SEP 11, 2026",
+  "updatedAt": "SEP 12, 2026",
   "items": [
+    {
+      "title": "Add VS Code Agents to Copilot usage metrics",
+      "url": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics",
+      "date": "SEP 11, 2026",
+      "type": "Improvement",
+      "summary": "GitHub Copilot usage metrics reports now include generally available metrics for activity in the dedicated VS Code Agents window, helping you measure adoption and engagement across enterprises and organizations. What’s…"
+    },
+    {
+      "title": "Auto-resolution and analysis updates in Copilot code review",
+      "url": "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review",
+      "date": "SEP 11, 2026",
+      "type": "Improvement",
+      "summary": "Copilot code review now resolves its own comments once you address them and writes smart commit messages for you when you apply its code suggestions. Behind the scenes, Copilot now…"
+    },
+    {
+      "title": "GitHub Copilot weekly releases — September 7",
+      "url": "https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7",
+      "date": "SEP 10, 2026",
+      "type": "Release",
+      "summary": "This week, GitHub Copilot introduces Jira integration in Copilot app and adaptive model orchestration with Project HydraFusion in Copilot CLI. We also introduced new agent automation in Visual Studio Code…"
+    },
     {
       "title": "Refreshed repository pull requests page in public preview",
       "url": "https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview",
@@ -21,27 +42,6 @@
       "date": "SEP 10, 2026",
       "type": "Improvement",
       "summary": "You can now use cache-mode to apply least-privilege access to the GitHub Actions cache at the workflow or job level. By granting each workflow or job only the cache access…"
-    },
-    {
-      "title": "Xcode 27 runner image now runs on macOS 27",
-      "url": "https://github.blog/changelog/2026-09-10-xcode-27-runner-image-now-runs-on-macos-27",
-      "date": "SEP 10, 2026",
-      "type": "Improvement",
-      "summary": "You can now validate your Apple apps against macOS 27 using the Xcode 27 runner image for GitHub-hosted macOS runners, available in public preview. The image previously ran on macOS…"
-    },
-    {
-      "title": "npm extends recovery-code security holds to all accounts",
-      "url": "https://github.blog/changelog/2026-09-09-npm-extends-recovery-code-security-holds-to-all-accounts",
-      "date": "SEP 9, 2026",
-      "type": "Improvement",
-      "summary": "npm now places a temporary 72-hour security hold on any account after a successful recovery-code sign-in, extending a protection that previously applied only to high-impact accounts. This change applies to…"
-    },
-    {
-      "title": "CodeQL 2.27.0 adds support for Linux ARM64",
-      "url": "https://github.blog/changelog/2026-09-09-codeql-2-27-0-adds-support-for-linux-arm64",
-      "date": "SEP 9, 2026",
-      "type": "Improvement",
-      "summary": "CodeQL 2.27.0 is now available on Linux ARM64, adds a new Rust security query, expanded framework coverage for Java/Kotlin and C#, and analysis accuracy improvements across multiple languages. CodeQL is…"
     }
   ]
 }
