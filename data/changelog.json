@@ -1,6 +1,20 @@
 {
-  "updatedAt": "SEP 14, 2026",
+  "updatedAt": "SEP 15, 2026",
   "items": [
+    {
+      "title": "Configure cost and quality in Copilot auto model selection",
+      "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
+      "date": "SEP 14, 2026",
+      "type": "Release",
+      "summary": "GitHub Copilot auto model selection now offers three tiers: efficiency, balance, and intelligence. Choose the tier that reflects how you want auto to weigh cost, quality, and response time for…"
+    },
+    {
+      "title": "Profiles now show your highest achievement badge tier",
+      "url": "https://github.blog/changelog/2026-09-11-profiles-now-show-your-highest-achievement-badge-tier",
+      "date": "SEP 11, 2026",
+      "type": "Improvement",
+      "summary": "Your GitHub profile now displays the highest tier you’ve earned for achievements with multiple levels. Previously, profiles could display the first tier earned, even after you had progressed to a…"
+    },
     {
       "title": "Add VS Code Agents to Copilot usage metrics",
       "url": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics",
@@ -28,20 +42,6 @@
       "date": "SEP 10, 2026",
       "type": "Release",
       "summary": "A refreshed repository-level pull request listing page is now in public preview for all GitHub users. It brings powerful filtering, compact presentation mode, and more. Highlights The new page makes…"
-    },
-    {
-      "title": "AI Scan for pull request APIs in public preview",
-      "url": "https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview",
-      "date": "SEP 10, 2026",
-      "type": "Improvement",
-      "summary": "You can now manage GitHub code scanning’s AI Scan for pull request enablement with REST API endpoints at the organization and repository levels. This public preview gives teams a programmatic…"
-    },
-    {
-      "title": "Control GitHub Actions cache access with cache-mode",
-      "url": "https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode",
-      "date": "SEP 10, 2026",
-      "type": "Improvement",
-      "summary": "You can now use cache-mode to apply least-privilege access to the GitHub Actions cache at the workflow or job level. By granting each workflow or job only the cache access…"
     }
   ]
 }
