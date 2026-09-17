@@ -1,6 +1,34 @@
 {
-  "updatedAt": "SEP 16, 2026",
+  "updatedAt": "SEP 17, 2026",
   "items": [
+    {
+      "title": "Automate SSO authorization for classic PATs and SSH keys",
+      "url": "https://github.blog/changelog/2026-09-16-automate-sso-authorization-for-classic-pats-and-ssh-keys",
+      "date": "SEP 16, 2026",
+      "type": "Release",
+      "summary": "Enterprise admins can now automate SSO authorization for existing classic personal access tokens (PATs) and SSH keys for organizations in GitHub Enterprise Cloud, replacing manual per-organization authorization by your developers.…"
+    },
+    {
+      "title": "SCIM user responses now include a profileUrl attribute",
+      "url": "https://github.blog/changelog/2026-09-16-scim-user-responses-now-include-a-profileurl-attribute",
+      "date": "SEP 16, 2026",
+      "type": "Improvement",
+      "summary": "SCIM user responses from GitHub now include the standard profileUrl attribute defined by RFC 7643, containing the absolute URL of the GitHub account linked to the external identity. Previously, matching…"
+    },
+    {
+      "title": "Copilot budget increase requests are generally available",
+      "url": "https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available",
+      "date": "SEP 16, 2026",
+      "type": "Release",
+      "summary": "Previously, when a member used all the Copilot AI credits available to them, they were blocked from Copilot features that consume credits. This release adds a flow for them to…"
+    },
+    {
+      "title": "Code scanning AI Scan no longer requires CodeQL default setup",
+      "url": "https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup",
+      "date": "SEP 16, 2026",
+      "type": "Improvement",
+      "summary": "You can now use AI Scan for pull requests to find security vulnerabilities, even when CodeQL default setup isn’t enabled on a repository. Previously, AI Scan for pull requests only…"
+    },
     {
       "title": "Enforce GitHub Advanced Security configurations",
       "url": "https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations",
@@ -14,34 +42,6 @@
       "date": "SEP 15, 2026",
       "type": "Release",
       "summary": "GitHub Copilot can now suggest allowed values when you create a custom property for repositories in your organization. This feature is in public preview for GitHub Copilot Business and Copilot…"
-    },
-    {
-      "title": "Configure cost and quality in Copilot auto model selection",
-      "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
-      "date": "SEP 14, 2026",
-      "type": "Release",
-      "summary": "GitHub Copilot auto model selection now offers three tiers: efficiency, balance, and intelligence. Choose the tier that reflects how you want auto to weigh cost, quality, and response time for…"
-    },
-    {
-      "title": "Profiles now show your highest achievement badge tier",
-      "url": "https://github.blog/changelog/2026-09-11-profiles-now-show-your-highest-achievement-badge-tier",
-      "date": "SEP 11, 2026",
-      "type": "Improvement",
-      "summary": "Your GitHub profile now displays the highest tier you’ve earned for achievements with multiple levels. Previously, profiles could display the first tier earned, even after you had progressed to a…"
-    },
-    {
-      "title": "Add VS Code Agents to Copilot usage metrics",
-      "url": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics",
-      "date": "SEP 11, 2026",
-      "type": "Improvement",
-      "summary": "GitHub Copilot usage metrics reports now include generally available metrics for activity in the dedicated VS Code Agents window, helping you measure adoption and engagement across enterprises and organizations. What’s…"
-    },
-    {
-      "title": "Auto-resolution and analysis updates in Copilot code review",
-      "url": "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review",
-      "date": "SEP 11, 2026",
-      "type": "Improvement",
-      "summary": "Copilot code review now resolves its own comments once you address them and writes smart commit messages for you when you apply its code suggestions. Behind the scenes, Copilot now…"
     }
   ]
 }
