@@ -1,6 +1,34 @@
 {
-  "updatedAt": "SEP 18, 2026",
+  "updatedAt": "SEP 19, 2026",
   "items": [
+    {
+      "title": "Copilot code review: An improved review experience",
+      "url": "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience",
+      "date": "SEP 18, 2026",
+      "type": "Improvement",
+      "summary": "Copilot code review now gives you a clearer view of how a review changes over time, more intelligently auto-resolves its own suggestions, and generates useful commit messages when you accept…"
+    },
+    {
+      "title": "Manage the code coverage ruleset condition with the REST API",
+      "url": "https://github.blog/changelog/2026-09-18-manage-the-code-coverage-ruleset-condition-with-the-rest-api",
+      "date": "SEP 18, 2026",
+      "type": "Improvement",
+      "summary": "You can now use the generally available REST API to manage the Restrict code coverage repository ruleset option, in addition to the existing UI support. This ruleset lets you enforce…"
+    },
+    {
+      "title": "GitHub Copilot weekly releases — September 14",
+      "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14",
+      "date": "SEP 18, 2026",
+      "type": "Release",
+      "summary": "This week, GitHub Copilot adds new model selection options, code review updates, and Sentry integration in the Copilot app. There are also updates for admins, plus new agent features in…"
+    },
+    {
+      "title": "Stage-only npm tokens for safer automation",
+      "url": "https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation",
+      "date": "SEP 18, 2026",
+      "type": "Improvement",
+      "summary": "You can now select Read and write (stage only) when creating an npm granular access token. This lets your automated workflows stage package versions for review without giving the token…"
+    },
     {
       "title": "Copilot impact dashboard now shows feature engagement",
       "url": "https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement",
@@ -14,34 +42,6 @@
       "date": "SEP 17, 2026",
       "type": "Improvement",
       "summary": "GitHub Copilot expands existing CLI report coverage with agentic activity metrics for skills, custom agents, Model Context Protocol (MCP) servers, slash commands, and plugins. What’s new The fields appear in…"
-    },
-    {
-      "title": "Ubuntu 26 generally available and latest migration",
-      "url": "https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration",
-      "date": "SEP 17, 2026",
-      "type": "Improvement",
-      "summary": "The Ubuntu 26.04 runner image for GitHub Actions is now out of public preview and fully supported for production workflows on both x64 and arm64. As part of this release,…"
-    },
-    {
-      "title": "Workflow execution protections in GitHub Actions generally available",
-      "url": "https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available",
-      "date": "SEP 17, 2026",
-      "type": "Release",
-      "summary": "Workflow execution protections for GitHub Actions, previously in public preview, are now generally available for GitHub Enterprise, organizations, and repositories. Execution protections let you define an allowlist that controls who…"
-    },
-    {
-      "title": "Automate SSO authorization for classic PATs and SSH keys",
-      "url": "https://github.blog/changelog/2026-09-16-automate-sso-authorization-for-classic-pats-and-ssh-keys",
-      "date": "SEP 16, 2026",
-      "type": "Release",
-      "summary": "Enterprise admins can now automate SSO authorization for existing classic personal access tokens (PATs) and SSH keys for organizations in GitHub Enterprise Cloud, replacing manual per-organization authorization by your developers.…"
-    },
-    {
-      "title": "SCIM user responses now include a profileUrl attribute",
-      "url": "https://github.blog/changelog/2026-09-16-scim-user-responses-now-include-a-profileurl-attribute",
-      "date": "SEP 16, 2026",
-      "type": "Improvement",
-      "summary": "SCIM user responses from GitHub now include the standard profileUrl attribute defined by RFC 7643, containing the absolute URL of the GitHub account linked to the external identity. Previously, matching…"
     }
   ]
 }
