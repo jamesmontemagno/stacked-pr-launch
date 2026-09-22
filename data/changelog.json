@@ -1,6 +1,27 @@
 {
-  "updatedAt": "SEP 21, 2026",
+  "updatedAt": "SEP 22, 2026",
   "items": [
+    {
+      "title": "Refreshed repository pull requests page generally available",
+      "url": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available",
+      "date": "SEP 22, 2026",
+      "type": "Release",
+      "summary": "The new repository pull requests page is now generally available to all GitHub users. Highlights The new page makes it easier to find and act on pull requests in a…"
+    },
+    {
+      "title": "GitHub Enterprise adds credential inventory exports",
+      "url": "https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports",
+      "date": "SEP 21, 2026",
+      "type": "Release",
+      "summary": "Enterprise owners can now export a complete inventory of every credential that can access their enterprise (e.g., SSH keys, classic and fine-grained personal access tokens, OAuth App access tokens, and…"
+    },
+    {
+      "title": "Grok 4.7 is now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
+      "date": "SEP 21, 2026",
+      "type": "Release",
+      "summary": "Grok 4.7, xAI’s latest reasoning model, is now rolling out in GitHub Copilot. Building on Grok 4.6, it is designed for agentic coding and complex, multistep workflows. This model is…"
+    },
     {
       "title": "Copilot code review: An improved review experience",
       "url": "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience",
@@ -21,27 +42,6 @@
       "date": "SEP 18, 2026",
       "type": "Release",
       "summary": "This week, GitHub Copilot adds new model selection options, code review updates, and Sentry integration in the Copilot app. There are also updates for admins, plus new agent features in…"
-    },
-    {
-      "title": "Stage-only npm tokens for safer automation",
-      "url": "https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation",
-      "date": "SEP 18, 2026",
-      "type": "Improvement",
-      "summary": "You can now select Read and write (stage only) when creating an npm granular access token. This lets your automated workflows stage package versions for review without giving the token…"
-    },
-    {
-      "title": "Copilot impact dashboard now shows feature engagement",
-      "url": "https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement",
-      "date": "SEP 17, 2026",
-      "type": "Improvement",
-      "summary": "The Copilot impact dashboard now shows how many active users regularly use key Copilot features. Enterprise administrators can quickly see which experiences are widely adopted and which may need more…"
-    },
-    {
-      "title": "Agentic CLI customizations now in the usage metrics API",
-      "url": "https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api",
-      "date": "SEP 17, 2026",
-      "type": "Improvement",
-      "summary": "GitHub Copilot expands existing CLI report coverage with agentic activity metrics for skills, custom agents, Model Context Protocol (MCP) servers, slash commands, and plugins. What’s new The fields appear in…"
     }
   ]
 }
